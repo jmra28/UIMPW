@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Slider Automático Programa</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      padding: 40px 10px;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .programa-slider-container {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .programa-slider-track {
+      display: flex;
+      transition: transform 0.4s ease;
+    }
+
+    .programa-slide {
+      flex: 0 0 auto;
+      width: 385px;
+      height: 400px;
+      margin: 0 10px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .programa-slide {
+        width: 600px;
+      }
+    }
+
+    .programa-img {
+      height: 66%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .programa-content {
+      padding: 10px;
+    }
+
+    .programa-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .programa-contact-btn {
+      padding: 8px 16px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .programa-contact-btn:hover {
+      background-color: #2980b9;
+    }
+
+    .programa-slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      z-index: 1;
+      opacity: 0.7;
+      border-radius: 5px;
+    }
+
+    .programa-slider-btn:hover {
+      opacity: 1;
+    }
+
+    .programa-prev {
+      left: 10px;
+    }
+
+    .programa-next {
+      right: 10px;
+    }
+
+    .programa-ver-mas {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #2ecc71;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .programa-ver-mas:hover {
+      background-color: #27ae60;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="programa-slider-container">
+    <button class="programa-slider-btn programa-prev">&#10094;</button>
+    <div class="programa-slider-track" id="programaSliderTrack">
+      <div class="programa-slide">
+        <img src="https://source.unsplash.com/600x400/?students,1" class="programa-img" alt="Estudiantes 1"/>
+        <div class="programa-content">
+          <div class="programa-title">PROGRAMA</div>
+          <button class="programa-contact-btn">Contactar</button>
+        </div>
+      </div>
+      <div class="programa-slide">
+        <img src="https://source.unsplash.com/600x400/?students,2" class="programa-img" alt="Estudiantes 2"/>
+        <div class="programa-content">
+          <div class="programa-title">PROGRAMA</div>
+          <button class="programa-contact-btn">Contactar</button>
+        </div>
+      </div>
+      <div class="programa-slide">
+        <img src="https://source.unsplash.com/600x400/?students,3" class="programa-img" alt="Estudiantes 3"/>
+        <div class="programa-content">
+          <div class="programa-title">PROGRAMA</div>
+          <button class="programa-contact-btn">Contactar</button>
+        </div>
+      </div>
+      <div class="programa-slide">
+        <img src="https://source.unsplash.com/600x400/?students,4" class="programa-img" alt="Estudiantes 4"/>
+        <div class="programa-content">
+          <div class="programa-title">PROGRAMA</div>
+          <button class="programa-contact-btn">Contactar</button>
+        </div>
+      </div>
+      <div class="programa-slide">
+        <img src="https://source.unsplash.com/600x400/?students,5" class="programa-img" alt="Estudiantes 5"/>
+        <div class="programa-content">
+          <div class="programa-title">PROGRAMA</div>
+          <button class="programa-contact-btn">Contactar</button>
+        </div>
+      </div>
+    </div>
+    <button class="programa-slider-btn programa-next">&#10095;</button>
+  </div>
+
+  <button class="programa-ver-mas">Ver más</button>
+
+  <script>
+  const track = document.getElementById('programaSliderTrack');
+  const slides = document.querySelectorAll('.programa-slide');
+  const prevBtn = document.querySelector('.programa-prev');
+  const nextBtn = document.querySelector('.programa-next');
+
+  let currentIndex = 0;
+  let autoSlideInterval;
+
+  function getVisibleSlidesCount() {
+    const containerWidth = document.querySelector('.programa-slider-container').offsetWidth;
+    const slideWidth = slides[0].offsetWidth + 20; // incluir márgenes
+    return Math.floor(containerWidth / slideWidth);
+  }
+
+  function updateSlider() {
+    const slideWidth = slides[0].offsetWidth + 20;
+    const offset = -slideWidth * currentIndex;
+    track.style.transform = `translateX(${offset}px)`;
+  }
+
+  function goToNextSlide() {
+    const visibleCount = getVisibleSlidesCount();
+    const maxIndex = slides.length - visibleCount;
+    if (currentIndex < maxIndex) {
+      currentIndex++;
+    } else {
+      currentIndex = 0;
+    }
+    updateSlider();
+  }
+
+  function goToPrevSlide() {
+    const visibleCount = getVisibleSlidesCount();
+    const maxIndex = slides.length - visibleCount;
+    if (currentIndex > 0) {
+      currentIndex--;
+    } else {
+      currentIndex = maxIndex;
+    }
+    updateSlider();
+  }
+
+  function startAutoSlide() {
+    autoSlideInterval = setInterval(goToNextSlide, 3000);
+  }
+
+  function stopAutoSlide() {
+    clearInterval(autoSlideInterval);
+  }
+
+  nextBtn.addEventListener('click', () => {
+    stopAutoSlide();
+    goToNextSlide();
+    startAutoSlide();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    stopAutoSlide();
+    goToPrevSlide();
+    startAutoSlide();
+  });
+
+  window.addEventListener('resize', updateSlider);
+
+  startAutoSlide();
+  </script>
+
+</body>
+</html>

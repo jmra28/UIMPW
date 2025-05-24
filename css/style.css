@@ -1,0 +1,1128 @@
+/* Custom styles for the website */
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+
+/* Header styles */
+.custom-navbar {
+    background: linear-gradient(to right, #f5f5f5, #e5e5e5); /* Modify navbar background here */
+    padding: 10px 20px;
+}
+
+.navbar-brand {
+    font-size: 1rem;
+}
+
+.uni-title {
+    color: #c1272d;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.campus-title {
+    color: rgb(34, 40, 87);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+/* Menu item styles - Modify font size, color, and hover effects here */
+.nav-link {
+    color: rgb(34, 40, 87)  !important; /* Modify text color here */
+    font-size: 1rem; /* Modify font size here */
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0 15px;
+    font-family: 'Gothan', sans-serif;
+}
+
+.nav-link:hover {
+    color: #c1272d !important; /* Modify hover text color here */
+}
+
+/* Dropdown menu styles - Modify background and item styles here */
+.dropdown-menu {
+    background-color: #f5f5f5; /* Modify dropdown background here */
+}
+/* Dropdown arrow styles */
+.dropdown-toggle::after {
+    border: none; /* Remove default Bootstrap arrow */
+    content: ''; /* Clear default content */
+    display: inline-block;
+    width: 16px; /* Adjust size of the icon */
+    height: 16px; /* Adjust size of the icon */
+    background-image: url('../assets/images/abajo.png'); /* Path to your custom icon */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+    margin-left: 5px; /* Space between text and icon */
+}
+
+.dropdown-item {
+    color: rgb(34, 40, 87); /* Modify dropdown item text color here */
+    font-size: 0.9rem; /* Modify dropdown item font size here */
+}
+
+.dropdown-item:hover {
+    background-color: #e5e5e5; /* Modify dropdown hover background here */
+    color: #c1272d; /* Modify dropdown hover text color here */
+}
+
+/* Button styles */
+.btn-alumnos {
+    background-color: rgb(34, 40, 87);
+    color: white;
+    border-radius: 10px;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    box-shadow: 5px 5px 10px grey;
+}
+
+.btn-alumnos:hover {
+    background-color: #c1272d;
+    color: white;
+}
+
+.btn-empresas {
+        box-shadow: 5px 5px 10px grey;
+    background-color: #c1272d;
+    color: white;
+    border-radius: 10px;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.btn-empresas:hover {
+    background-color: rgb(34, 40, 87);
+    color: white;
+}
+/* Video Background */
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Carousel Overlay */
+.carousel-overlay {
+    position: relative;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+    text-align: left; /* Align text to the left */
+    padding-left: 5%;
+    
+    box-shadow: 5px 5px 10px rgb(1, 32, 72);
+
+    
+}
+
+#heroCarousel {
+width: 50%;
+    max-width: 600px;
+    position: relative;
+    z-index: 2; /* Ensure carousel is above the video */
+}
+
+.carousel-content {
+    text-align: center;
+    background: linear-gradient(to right,rgba(255, 255, 255, 0.01),rgba(5, 4, 65, 0.6)); /* Blue to white gradient */
+    padding: 20px;
+    border-radius: 0px 100px 100px 0px;
+}
+
+.carousel-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.carousel-subtitle a {
+    font-size: 1.5rem;
+    color: #c1272d;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.carousel-subtitle a:hover {
+    color: #ffffff;
+}
+
+.carousel-text {
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-image: none;
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.carousel-control-prev-icon {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 16 16"><path d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/></svg>');
+}
+
+.carousel-control-next-icon {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 16 16"><path d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg>');
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .nav-link {
+        margin: 5px 0;
+    }
+
+    .d-flex {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .btn-alumnos, .btn-empresas {
+        margin: 5px;
+    }
+
+    .carousel-overlay {
+        padding-left: 3%;
+    }
+
+    #heroCarousel {
+        width: 80%;
+    }
+
+    .carousel-title {
+        font-size: 2rem;
+    }
+
+    .carousel-subtitle a {
+        font-size: 1.2rem;
+    }
+
+    .carousel-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .carousel-overlay {
+        padding-left: 2%;
+    }
+
+    #heroCarousel {
+        width: 90%;
+    }
+
+    .carousel-title {
+        font-size: 1.5rem;
+    }
+
+    .carousel-subtitle a {
+        font-size: 1rem;
+    }
+
+    .carousel-text {
+        font-size: 0.9rem;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 10%;
+    }
+}
+
+
+/* slider empresas //////////////////////////////////*/
+
+/* Company Text */
+.company-text {
+    margin-top: 40px;
+    text-align: left;
+    margin-left: 10%; /* Displace text to the right adaptively */
+    margin-bottom: 20px; /* Space between text and slider */
+    z-index: 3; /* Ensure text is above the slider */
+    max-width: 60%;
+}
+
+.texto-azul {
+    
+    color: rgb(34, 40, 87); /* Match the blue color used elsewhere */
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: 'Gothan', sans-serif;
+}
+
+.texto-rojo {
+    color: #c1272d; /* Match the red color used elsewhere */
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: 'Gothan', sans-serif;
+
+}
+
+.texto-rojo-2 {
+    display: block; /* Make it a block to appear on a new line */
+    color: #c1272d;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 10px; /* Space between the two lines */
+    font-family: 'Gothan', sans-serif;
+
+}
+
+
+.cuerpo {
+  align-items: flex-start;
+  background-image: url("/assets/images/fondo1.jpg");
+  display: flex;
+  height: 50vh;
+  justify-content: center;
+  flex-direction: column; /* Stack children vertically */
+
+}
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-250px * 7));
+            transform: translateX(calc(-250px * 7));
+  }
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-250px * 7));
+            transform: translateX(calc(-250px * 7));
+  }
+}
+.slider {
+  /*background: rgb(79, 59, 59);*/
+  /*box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);*/
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 95%;
+}
+.slider::before, .slider::after {
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider .slide-track {
+  -webkit-animation: scroll 40s linear infinite;
+          animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+.slider .slide {
+  height: 50px;
+  width: 250px;
+}
+
+/* programas de estudio */
+.programa {
+  align-items: flex-start;
+  background-color: #ffffff;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  flex-direction: column; /* Stack children vertically */
+
+}
+
+
+.program-studio {
+    margin-top: 10px;
+    text-align: left;
+    margin-left: 10%; /* Displace text to the right adaptively */
+    margin-bottom: 20px; /* Space between text and slider */
+    z-index: 3; /* Ensure text is above the slider */
+    max-width: 60%;
+}
+
+.programas-cuerpo {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      padding: 40px 10px;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+.programa-slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden; /* ✅ Oculta los elementos fuera del carril */
+  margin: 0 auto;
+}
+
+.programa-slider-track {
+display: flex;
+  transition: transform 0.4s ease;
+  will-change: transform;
+    }
+
+.programa-slide {
+      flex: 0 0 auto;
+      width: 285px;
+      height: 500px;
+      margin: 0 10px;
+      background-color: #faf7f7;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      text-align: center;
+    }
+
+
+    @media (min-width: 768px) {
+      .programa-slide {
+        width: 400px;
+      }
+
+.texto-azul-prog {
+    
+    color: rgb(34, 40, 87); /* Match the blue color used elsewhere */
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: 'Gothan', sans-serif;
+}
+
+.texto-rojo-prog {
+    color: #c1272d; /* Match the red color used elsewhere */
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: 'Gothan', sans-serif;
+
+}
+
+.texto-rojo-2-prog {
+    display: block; /* Make it a block to appear on a new line */
+    color: #c1272d;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 10px; /* Space between the two lines */
+    font-family: 'Gothan', sans-serif;
+
+}
+    }
+
+    .programa-img {
+      height:70%; 
+      width: 100%;
+      object-fit: cover;
+        transition: transform 0.3s ease-in-out; /* Transición suave */
+
+    }
+
+    .programa-img:hover {
+  transform: scale(1.1); /* Aumenta el tamaño al pasar el ratón */
+
+
+    }
+
+    .programa-content {
+      padding: 10px;
+    }
+
+    .programa-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .programa-contact-btn {
+      padding: 8px 16px;
+      background-color: rgb(34, 40, 87);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .programa-contact-btn:hover {
+      background-color:rgb(34, 40, 87);
+    }
+
+    .programa-slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      z-index: 1;
+      opacity: 0.7;
+      border-radius: 5px;
+    }
+
+    .programa-slider-btn:hover {
+      opacity: 1;
+    }
+
+    .programa-prev {
+      left: 10px;
+    }
+
+    .programa-next {
+      right: 10px;
+    }
+
+    .programa-ver-mas {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #2ecc71;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .programa-ver-mas:hover {
+      background-color: #27ae60;
+    }
+
+    /* Button styles */
+.btn-contactar {
+  outline:none;
+
+  margin-top: 5px;
+    background-color: rgb(34, 40, 87);
+    color: white;
+    border-radius: 10px;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    box-shadow: 5px 5px 10px grey;
+}
+
+.btn-contactar:hover {outline:none;
+
+    background-color: #c1272d;
+    color: white;
+}
+
+.btn-vermas {
+  outline:none;
+
+    box-shadow: 5px 5px 10px grey;
+    background-color: #c1272d;
+    color: white;
+    border-radius: 10px;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.btn-vermas:hover {
+  outline:none;
+
+    background-color: rgb(34, 40, 87);
+    color: white;
+}
+
+
+
+
+
+
+/* Extra Small Devices (Celulares antiguos ~320px - 480px) */
+@media (max-width: 480px) {
+  .carousel-title {
+    font-size: 1.2rem;
+  }
+
+  .carousel-subtitle a,
+  .carousel-text {
+    font-size: 0.8rem;
+  }
+
+  .company-text,
+  .program-studio {
+    margin-left: 5%;
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .texto-azul,
+  .texto-rojo {
+    font-size: 1.5rem;
+  }
+
+  .texto-rojo-2 {
+    font-size: 1rem;
+  }
+
+  .programa-slide {
+    width: 90% !important;
+    height: auto;
+  }
+
+  .programa-img {
+    height: auto;
+  }
+
+  .programa-slider-btn {
+    padding: 5px 10px;
+  }
+
+  .navbar-nav {
+    margin-top: 10px;
+  }
+
+  .btn-alumnos,
+  .btn-empresas {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  #background-video {
+    opacity: 0.2;
+    height: auto;
+    position: relative;
+  }
+
+  .carousel-overlay {
+    position: relative;
+    min-height: auto;
+    padding: 10px;
+  }
+
+  .texto-azul-prog {
+    
+    color: rgb(34, 40, 87); /* Match the blue color used elsewhere */
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: 'Gothan', sans-serif;
+}
+
+.texto-rojo-prog {
+    color: #c1272d; /* Match the red color used elsewhere */
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: 'Gothan', sans-serif;
+
+}
+
+.texto-rojo-2-prog {
+    display: block; /* Make it a block to appear on a new line */
+    color: #c1272d;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 10px; /* Space between the two lines */
+    font-family: 'Gothan', sans-serif;
+
+}
+}
+
+/* Extra Large Screens (pantallas ≥1600px) */
+@media (min-width: 1600px) {
+  #heroCarousel {
+    width: 40%;
+    max-width: 800px;
+  }
+
+  .carousel-title {
+    font-size: 3.5rem;
+  }
+
+  .carousel-subtitle a {
+    font-size: 2rem;
+  }
+
+  .carousel-text {
+    font-size: 1.5rem;
+  }
+
+  .programa-slide {
+    width: 700px;
+    height: 850px;
+  }
+
+  .texto-azul-prog {
+    
+    color: rgb(34, 40, 87); /* Match the blue color used elsewhere */
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: 'Gothan', sans-serif;
+}
+
+.texto-rojo-prog {
+    color: #c1272d; /* Match the red color used elsewhere */
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: 'Gothan', sans-serif;
+
+}
+
+.texto-rojo-2-prog {
+    display: block; /* Make it a block to appear on a new line */
+    color: #c1272d;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 10px; /* Space between the two lines */
+    font-family: 'Gothan', sans-serif;
+
+}
+}
+/* Beneficios Section */
+.beneficios {
+    background-color: #f0f0f0;
+    padding: 40px 0;
+    text-align: center;
+}
+.beneficios-studio {
+    margin-top: 10px;
+    text-align: left;
+    margin-bottom: 20px; /* Space between text and slider */
+    z-index: 3; /* Ensure text is above the slider */
+    max-width: 100%;
+}
+
+
+.beneficios-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.beneficios-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: rgb(34, 40, 87);
+    margin-bottom: 40px;
+}
+
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row on large screens */
+    gap: 20px;
+}
+
+.beneficio-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.beneficio-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.beneficio-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.beneficio-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #c1272d;
+    margin-bottom: 10px;
+}
+
+.beneficio-description {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Responsive Adjustments for Beneficios */
+@media (max-width: 991px) {
+    .beneficios-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens */
+    }
+
+    .beneficios-title {
+        font-size: 2rem;
+    }
+
+    .beneficio-title {
+        font-size: 1.2rem;
+    }
+
+    .beneficio-description {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .beneficios-grid {
+        grid-template-columns: 1fr; /* 1 card per row on small screens */
+    }
+
+    .beneficios-title {
+        font-size: 1.8rem;
+    }
+
+    .beneficio-title {
+        font-size: 1.1rem;
+    }
+
+    .beneficio-description {
+        font-size: 0.8rem;
+    }
+
+    .beneficio-icon {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .beneficios {
+        padding: 20px 0;
+    }
+
+    .beneficios-title {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .beneficio-card {
+        padding: 15px;
+    }
+
+    .beneficio-title {
+        font-size: 1rem;
+    }
+
+    .beneficio-description {
+        font-size: 0.75rem;
+    }
+
+    .beneficio-icon {
+        font-size: 1.8rem;
+    }
+}
+
+
+/* Estadisticas Section */
+.estadisticas {
+    background-image: url(/assets/images/fondo3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 2px 0px 35px 21px rgb(8, 12, 235);
+    -webkit-box-shadow: 2px 0px 35px 21px rgba(169, 169, 169, 0.315);
+    -moz-box-shadow: 2px 0px 35px 21px rgba(218,218,218,1);
+}
+
+.estadisticas-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.estadisticas-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: rgb(34, 40, 87);
+    margin-bottom: 0px;
+}
+
+.estadisticas-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 stats per row on large screens */
+    gap: 20px;
+}
+
+.estadistica-item {
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.estadistica-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.estadistica-number {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #c1272d;
+    margin-bottom: 10px;
+    font-family:Arial, Helvetica, sans-serif ;
+
+}
+
+.estadistica-number::before {
+    content: " + ";
+    font-size: 4rem;
+    font-weight: 900;
+    color: #c1272d;
+    margin-left: 5px;
+    font-family:Arial, Helvetica, sans-serif ;
+
+}
+
+
+ .texto-azul-num {
+    color: rgb(34, 40, 87); /* Match the blue color used elsewhere */
+    font-size: 1.4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family:Arial, Helvetica, sans-serif ;
+}
+
+.texto-rojo-num {
+    color: #c1272d; /* Match the red color used elsewhere */
+    font-size: 1.4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family:Arial, Helvetica, sans-serif ;
+
+}
+
+.estadistica-label {
+    font-size: rem;
+    color: #333;
+}
+
+/* Responsive Adjustments for Estadisticas */
+@media (max-width: 991px) {
+    .estadisticas-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 stats per row on medium screens */
+    }
+
+    .estadisticas-title {
+        font-size: 2rem;
+    }
+
+    .estadistica-number {
+        font-size: 1.8rem;
+    }
+
+    .estadistica-label {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .estadisticas-grid {
+        grid-template-columns: 1fr; /* 1 stat per row on small screens */
+    }
+
+    .estadisticas-title {
+        font-size: 1.8rem;
+    }
+
+    .estadistica-number {
+        font-size: 1.5rem;
+    }
+
+    .estadistica-label {
+        font-size: 0.85rem;
+    }
+
+    .estadistica-icon {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .estadisticas {
+        padding: 20px 0;
+    }
+
+    .estadisticas-title {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .estadistica-item {
+        padding: 15px;
+    }
+
+    .estadistica-number {
+        font-size: 1.3rem;
+    }
+
+    .estadistica-label {
+        font-size: 0.8rem;
+    }
+
+    .estadistica-icon {
+        font-size: 1.8rem;
+    }
+}
+
+/* TESTIMONIOS */
+.shadow-effect {
+		    background: #fff;
+		    padding: 20px;
+		    border-radius: 10px;
+		    text-align: center;
+	        border:1px solid #ECECEC;
+		    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.2), 0 15px 12px rgba(0,0,0,0.02);
+		}
+        .shadow-effect p {
+            font-style: oblique;
+        }
+		#customers-testimonials .shadow-effect p {
+		    font-family: inherit;
+		    font-size: 17px;
+		    line-height: 1.5;
+		    margin: 0 0 17px 0;
+		    font-weight: 300;
+		}
+
+
+		.testimonial-name {
+		    margin: -17px auto 0;
+		    display: table;
+		    width: auto;
+		    background-color: rgb(34, 40, 87) ;
+		    padding: 9px 35px;
+		    border-radius: 12px;
+		    text-align: center;
+		    color: #fff;
+		    box-shadow: 0 9px 18px rgba(0,0,0,0.12), 0 5px 7px rgba(0,0,0,0.05);
+		}
+		#customers-testimonials .item {
+		    text-align: center;
+		    padding: 50px;
+				margin-bottom:80px;
+		    opacity: .2;
+		    -webkit-transform: scale3d(0.8, 0.8, 1);
+		    transform: scale3d(0.8, 0.8, 1);
+		    -webkit-transition: all 0.3s ease-in-out;
+		    -moz-transition: all 0.3s ease-in-out;
+		    transition: all 0.3s ease-in-out;
+		}
+		#customers-testimonials .owl-item.active.center .item {
+		    opacity: 1;
+		    -webkit-transform: scale3d(1.0, 1.0, 1);
+		    transform: scale3d(1.0, 1.0, 1);
+		}
+		.owl-carousel .owl-item img {
+		    transform-style: preserve-3d;
+		    max-width: 120px;
+    		margin: 0 auto 17px;
+		}
+		#customers-testimonials.owl-carousel .owl-dots .owl-dot.active span,
+#customers-testimonials.owl-carousel .owl-dots .owl-dot:hover span {
+		    background-color: rgb(34, 40, 87) ;
+		    transform: translate3d(0px, -50%, 0px) scale(0.7);
+		}
+#customers-testimonials.owl-carousel .owl-dots{
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+}
+#customers-testimonials.owl-carousel .owl-dots .owl-dot{
+	display: inline-block;
+}
+		#customers-testimonials.owl-carousel .owl-dots .owl-dot span {
+		    background-color: rgb(34, 40, 87) ;
+		    display: inline-block;
+		    height: 20px;
+		    margin: 0 2px 5px;
+		    transform: translate3d(0px, -50%, 0px) scale(0.3);
+		    transform-origin: 50% 50% 0;
+		    transition: all 250ms ease-out 0s;
+		    width: 20px;
+		}
+.texto-azul-test {
+    
+    color: rgb(34, 40, 87); /* Match the blue color used elsewhere */
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: 'Gothan', sans-serif;
+    margin-left: 3.8%;
+}
+
+.texto-rojo-test {
+    color: #c1272d; /* Match the red color used elsewhere */
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: 'Gothan', sans-serif;
+
+}
+
+.texto-rojo-2-test {
+    display: block; /* Make it a block to appear on a new line */
+    color: #c1272d;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 10px; /* Space between the two lines */
+    font-family: 'Gothan', sans-serif;
+    margin-left: 3.8%;
+}
+
+.img-circle{
+    border-radius: 100px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.10), 0 15px 12px rgba(3, 20, 204, 0.268);
+}
+
+/* FIN  - TESTIMONIOS */
+
+
+
