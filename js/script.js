@@ -2,11 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var myCarousel = document.querySelector('#heroCarousel');
     var carousel = new bootstrap.Carousel(myCarousel, {
         interval: 5000, // 5 seconds per slide
-        ride: 'carousel'
-
-
-
-        
+        ride: 'carousel'       
     });
 });
 
@@ -148,3 +144,83 @@ jQuery(document).ready(function($) {
         	});
 
 // FIN TESTIMONIAL
+
+
+$(function() {
+    // Use Bootstrap 5 native validation
+    const form = document.getElementById('contact-form');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            if (!form.checkValidity()) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+            form.classList.add('was-validated');
+
+            if (form.checkValidity()) {
+                e.preventDefault(); // Prevent default for demo
+                var url = "contact.php";
+
+                var messageAlert = "alert-success";
+                var messageText = "Tu mensaje ha sido enviado correctamente, nos comunicaremos contigo pronto.";
+
+                var alertBox = `<div class="alert ${messageAlert} alert-dismissible fade show" role="alert">
+                    ${messageText}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>`;
+
+                if (messageAlert && messageText) {
+                    $("#contact-form").find(".messages").html(alertBox);
+                    form.reset();
+                }
+            }
+        });
+    }
+
+    // Function to update program list based on educational level
+    window.updateProgramList = function() {
+        var level = document.getElementById("form_level").value;
+        var programSelect = document.getElementById("form_program");
+        programSelect.innerHTML = '<option value="">Selecciona tu programa de interes... *</option>'; // Reset to default
+
+        if (level === "Secundaria" || level === "Preparatoria") {
+             programSelect.value = ""; // Clear selection
+            programSelect.disabled = true; // Disable the select
+        } else {
+            programSelect.disabled = false; // Enable the select
+            let jsonUrl = '';
+            if (level === "Licenciatura") {
+                jsonUrl = 'programas/lic.json';
+            } else if (level === "Maestría") {
+                jsonUrl = 'programas/maes.json';
+            } else if (level === "Doctorado") {
+                jsonUrl = 'programas/doct.json';
+            }
+
+            if (jsonUrl) {
+                fetch(jsonUrl)
+                    .then(response => {
+                        if (!response.ok) throw new Error('Network response was not ok');
+                        return response.json();
+                    })
+                    .then(programs => {
+                        programs.forEach(function(program) {
+                            var option = document.createElement("option");
+                            option.value = program;
+                            option.text = program;
+                            programSelect.appendChild(option);
+
+                          });
+                    })
+                    .catch(error => {
+                        console.error('Error fetching programs:', error);
+                        // Fallback to empty list on error
+                        programSelect.value = ""; // Clear on error
+                    });
+            }
+        }
+    };
+
+    // Trigger update on page load if a level is pre-selected
+    updateProgramList();
+});

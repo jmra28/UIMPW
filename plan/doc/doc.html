@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctorado - UIM</title>
+    <!-- Link to local Bootstrap CSS -->
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+
+    <!-- Link to custom CSS -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">    
+
+    <link href="https://cdn.materialdesignicons.com/5.9.55/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
+    <link rel="shortcut icon" type="image/icon" href="../../assets/images/icon_bufalo.png"/>
+
+</head>
+<body>
+ <header>
+        <nav class="navbar navbar-expand-lg custom-navbar">
+            <div class="container-fluid">
+                <!-- Logo and Text -->
+                <a class="navbar-brand d-flex align-items-center" href="../../index.html">
+                    <img src="../../assets/images/logo-uim2.png"  alt="UIM Logo" style="height: 65px; margin-right: 10px;">                    
+                </a>
+                <!-- Toggler for mobile -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navigation Links and Buttons -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <!-- Navigation Links (Center) -->
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="ofertaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Oferta Académica
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="ofertaDropdown">
+                                <li><a class="dropdown-item" href="../sec/sec.html">Secundaria</a></li>
+                                <li><a class="dropdown-item" href="../prep/prep.html">Preparatoria</a></li>
+                                <li><a class="dropdown-item" href="../lic/lic.html">Licenciatura</a></li>
+                                <li><a class="dropdown-item" href="../maes/maes.html">Maestría</a></li>
+                                <li><a class="dropdown-item" href="../doc/doc.html">Doctorado</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="comunidadDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Comunidad y Aspirantes
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="comunidadDropdown">
+                                <li><a class="dropdown-item" href="#">Eventos</a></li>
+                                <li><a class="dropdown-item" href="#">Admisiones</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="inversionDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Inversión y Pagos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="inversionDropdown">
+                                <li><a class="dropdown-item" href="#">Costos</a></li>
+                                <li><a class="dropdown-item" href="#">Métodos de Pago</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- Buttons (Right) -->
+                    <div class="d-flex">
+                        <a href="https://uim.mx/moo" class="btn btn-alumnos me-2" target="_blank">Plataforma UIM</a>
+                        <a href="https://sist-control-escolar.com/apex/f?p=205:LOGIN:12168182438217:::::" class="btn btn-empresas" target="_blank">Control Escolar</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--  -->
+
+<section class="encabezado-slider" >
+<div id="secu-slider">    
+  <div class="secu-slides">
+    <div class="secu-slider">
+      <div class="secu-legend"></div>
+      <div class="secu-content">
+        <div class="secu-content-txt">
+          <h1>¡Únete a la Manada Búfalos!</h1>
+          <h2>Inscríbete en UIM y forma parte de una familia fuerte. ¡No te arrepentirás de este gran paso!</h2>
+          <button class="btn-contactar">Contactar</button>
+
+        </div>
+      </div>
+      <div class="secu-image">
+        <img src="../../assets/images/portadas/sec/port_sec1.jpg">
+      </div>
+    </div>
+    <div class="secu-slider">
+      <div class="secu-legend"></div>
+      <div class="secu-content">
+        <div class="secu-content-txt">
+          <h1>La Familia UIM te Espera</h1>
+          <h2>Descubre tu lugar en la familia búfalo. ¡Estudia con nosotros y #somos búfalos juntos!</h2>
+          <button class="btn-contactar">Contactar</button>
+
+        </div>
+      </div>
+      <div class="secu-image">
+        <img src="../../assets/images/portadas/sec/port_sec2.jpg">
+      </div>
+    </div>
+    <div class="secu-slider">
+      <div class="secu-legend"></div>
+      <div class="secu-content">
+        <div class="secu-content-txt">
+          <h1>¡Sé un Búfalo con UIM!</h1>
+          <h2>Únete a la manada y crece con apoyo. ¡Inscríbete y no mires atrás!</h2>
+          <button class="btn-contactar">Contactar</button>
+
+        </div>
+      </div>
+      <div class="secu-image">
+        <img src="../../assets/images/portadas/sec/port_sec3.jpg">
+      </div>
+    </div>
+    <div class="secu-slider">
+      <div class="secu-legend"></div>
+      <div class="secu-content">
+        <div class="secu-content-txt">
+          <h1>#SomosBúfalos, ¡Inscríbete!</h1>
+          <h2>Familia UIM te da la bienvenida. ¡Estudia aquí y vive el espíritu búfalo!</h2>
+          <button class="btn-contactar">Contactar</button>
+
+        </div>
+      </div>
+      <div class="secu-image">
+        <img src="../../assets/images/portadas/sec/port_sec4.jpg">
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+</section>   
+
+
+<!-- SECCION BENEFICIOS SECUNDARIA -->
+
+<section class="secu-bene-beneficios-secundaria">
+    <div class="container">
+        <div class="pasos-titulos">
+            <span class="texto-azul-faq">AQUÍ COMIENZA TU </span><span class="texto-rojo-faq">CAMINO EN UIM</span>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="secu-bene-image-container">
+                    <img src="/assets/images/bene_sec/sec_alumnos.png" alt="Secundaria Image">
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="secu-card-grid">
+                    <div class="secu-card" style="background-image:url(/assets/images/bene_sec/a_p.png) ;">
+                        <div class="secu-card-content">
+                            <p class="secu-card-text">En UIM, cada alumno es único. Ofrecemos seguimiento académico y emocional cercano, con grupos reducidos y docentes comprometidos con el desarrollo individual de cada estudiante.</p>
+                        </div>
+                    </div>
+                    <div class="secu-card" style="background-image:url(/assets/images/bene_sec/a_s.png) ;">
+                        <div class="secu-card-content">
+                            <p class="secu-card-text">Contamos con instalaciones protegidas, protocolos de ingreso, personal capacitado y un entorno sano para que los alumnos estudien con tranquilidad y confianza.</p>
+                        </div>
+                    </div>
+                    <div class="secu-card" style="background-image:url(/assets/images/bene_sec/c_a.png) ;">
+                        <div class="secu-card-content">
+                            <p class="secu-card-text"> Nuestros planes de estudio están diseñados para formar alumnos con pensamiento crítico, disciplina y alto rendimiento, guiados por maestros profesionales y actualizados.</p>
+                        </div>
+                    </div>
+                    <div class="secu-card" style="background-image:url(/assets/images/bene_sec/f_i.png) ;">
+                        <div class="secu-card-content">
+                            <p class="secu-card-text">Fomentamos no solo el aprendizaje académico, sino también los valores, el respeto, la empatía y el trabajo en equipo, preparando a los alumnos para la vida. </p>
+                        </div>
+                    </div>
+                    <div class="secu-card" style="background-image:url(/assets/images/bene_sec/p_m.png) ;">
+                        <div class="secu-card-content">
+                            <p class="secu-card-text"> Utilizamos tecnología de vanguardia para complementar la enseñanza: acceso a contenidos, tareas y clases en línea desde cualquier dispositivo, en cualquier lugar. </p>
+                        </div>
+                    </div>
+                    <div class="secu-card" style="background-image:url(/assets/images/bene_sec/v_o.png) ;">
+                        <div class="secu-card-content">
+                            <p class="secu-card-text"> Nuestros estudios cuentan con Reconocimiento de Validez Oficial (RVOE), lo que asegura que tu educación tiene respaldo legal y valor en todo el país. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FIN SECCION BENEFICIOS SECUNDARIA -->
+
+   
+<!-- PASOS  -->
+  
+<section class="pasos">
+    <div class="container">    
+
+        <video autoplay muted loop id="pasos-video" class="pasos-video">
+            <source src="../../assets/video/particulas4.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+        </video>
+
+        <div class="pasos-titulos">
+                    <span class="texto-azul-pasos">ESTAS A  </span><span class="texto-rojo-pasos"> 3 PASOS DEL ÉXITO PROFESIONAL</span>					    
+					<span class="texto-rojo-2-pasos">AQUÍ COMIENZA TU CAMINO PARA UN FUTURO MEJOR</span>            
+            </div>
+      <div class="row">
+     
+    <div class="pasos-container">
+        <div class="paso">
+            <img src="../../assets/images/pasos/p1.jpg" alt="Paso 1" class="paso-img">
+            <p class="paso-text-1">PASO 1</p>
+            <p class="paso-text-2">CONTACTA A UN ASESOR</p>
+            <p class="paso-text-3">Elije tu programa de estudios y comienza hoy mismo</p>
+        </div>
+
+       <div class="paso">
+            <img src="../../assets/images/pasos/p2.jpg" alt="Paso 2" class="paso-img">
+            <p class="paso-text-1">PASO 2</p>
+            <p class="paso-text-2">INICIA TU PROGRAMA</p>
+            <p class="paso-text-3">Cursa tus materias en un tiempo de 3 años y 4 meses</p>
+        </div>
+        <div class="paso">
+            <img src="../../assets/images/pasos/p3.jpg" alt="Paso 3" class="paso-img">
+            <p class="paso-text-1">PASO 3</p>
+            <p class="paso-text-2">TITÚLATE O CERTIFÍCATE</p>
+            <p class="paso-text-3">Obtén un título o certificado con validez oficial ante la SEP </p>
+        </div>
+    </div>
+      
+      </div>
+      </div>
+
+      
+    </section>
+
+<!-- FIN PASOS -->
+
+
+<!-- SECCIÓN CONTACTO-->
+
+<section id="contacto" class="contact-section">
+    <div class="container">
+        <div class="pasos-titulos">
+            <span class="texto-azul-faq">ES MOMENTO DE </span><span class="texto-rojo-faq"> TOMAR ACCIÓN</span>
+            <span class="texto-rojo-2-faq">DÉMOS JUNTOS EL PRIMER PASO</span>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <form id="contact-form" method="post" action="contact.php" role="form">
+                    <div class="messages"></div>
+                    <div class="controls">
+                        <div class="row">
+                        <h1 class="p-contacto-titulo1">¡HABLEMOS!</h1>
+                        <p class="p-contacto-titulo2">Estamos listos para ayudarte a avanzar y que seas un <strong>#BúfaloUIM</strong> </p>
+                        <br><br>
+                        <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_name">Nombre*</label>
+                                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Ingresa tu nombre *" required="required" data-error="El campo nombre es necesario.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_lastname">Apellidos*</label>
+                                    <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Ingresa tus apellidos.*" required="required" data-error="El campo apellido es necesario.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_email">Correo electrónico*</label>
+                                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Ingresa tu correo electrónico" required="required" data-error="Ingresa un correo electrónico valido">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_phone">Teléfono*</label>
+                                    <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Ingresa tu teléfono." required="required" data-error="Ingresa un número de teléfono">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_level">Nivel</label>
+                                    <div class="select-wrapper">
+                                        <select id="form_level" name="level" class="form-control custom-select" required="required" >
+                                            <option value="Secundaria">Secundaria</option>
+                                        </select>
+                                        <span class="dropdown-icon"><i class="fas fa-chevron-down"></i></span>
+                                    </div>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                          
+                        </div>                                                                                                                                        
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <br>
+                                    <label for="form_message">Mensaje</label>
+                                    <textarea id="form_message" name="message" class="form-control" placeholder="Escribe tu mensaje aquí..." rows="4" data-error="Porfavor, ingresa un mensaje."></textarea>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <br>
+                                <input type="submit" class="btn btn-success btn-send" value="Enviar Mensaje">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <br>
+                                    <p class="p-terminos-contacto">*Al enviar tus datos, aceptas nuestros <a href="">Términos y Condiciones </a> y puedes verificar nuestro <a href="">Aviso de Privacidad</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-6">
+                <div class="contact-info">
+                         
+                        <span class="p-contact-texto3">OFICINAS</span> <span class="p-contact-texto4">UIM</span>                 
+                    <br>
+                        <p>Llama o visita cualquiera de nuestras sedes. <br><p> 
+<!-- sede dgo-->   
+
+                            <div class="contact-detail">
+                                <strong>Sede:</strong> Durango:
+                            </div>
+                            
+                            <div class="contact-detail">
+                                <i class="fas fa-map-marker-alt"></i> <strong>Dirección:</strong> Calle Amex #131 Fracc. Las Tres Misiones Durango, Durango,
+                            </div>
+                            
+                            <div class="contact-detail">
+                                <i class="fas fa-phone"></i> <strong>Teléfono:</strong> 618-156-03-78
+                            </div> 
+                            <hr style="width: 80%;">
+ 
+                            
+<!-- sede matamoros-->   
+                        <div class="contact-detail">
+                                <strong>Sede:</strong> Matamoros:
+                            </div>
+                            
+                            <div class="contact-detail">
+                                <i class="fas fa-map-marker-alt"></i> <strong>Dirección:</strong> Av. Zaragoza #19 entre Niños Heroes y Alatorre
+                            </div>
+                            
+                            <div class="contact-detail">
+                                <i class="fas fa-phone"></i> <strong>Teléfono:</strong> 871-762-47-32
+                            </div>  
+                            <hr style="width: 80%;">
+
+<!-- sede lerdo-->   
+                        <div class="contact-detail">
+                                <strong>Sede:</strong> Lerdo:
+                            </div>
+                            
+                            <div class="contact-detail">
+                                <i class="fas fa-map-marker-alt"></i> <strong>Dirección:</strong> Calle Ortiz de Zarate No. 790, Col. Centro(Contra esquina de calle Chihuahua)
+                            </div>
+                            
+                            <div class="contact-detail">
+                                <i class="fas fa-phone"></i> <strong>Teléfono:</strong> 871-725-59-01
+                            </div>  
+                            <hr style="width: 80%;">
+
+<!-- sede Cuencamé-->   
+                        <div class="contact-detail">
+                                <strong>Sede:</strong> Cuencamé:
+                            </div>
+                            
+                            <div class="contact-detail">
+                                <i class="fas fa-map-marker-alt"></i> <strong>Dirección:</strong>Calle 16 de Septiembre No. 454. Col. La Esperanza
+                            </div>
+                            
+                            <div class="contact-detail">
+                                <i class="fas fa-phone"></i> <strong>Teléfono:</strong> 618-815-79-99
+                            </div>  
+                            <hr style="width: 80%;">
+
+ <!-- sede Saltillo-->   
+                        <div class="contact-detail">
+                                <strong>Sede:</strong> Saltillo:
+                            </div>
+                            
+                            <div class="contact-detail">
+                                <i class="fas fa-map-marker-alt"></i> <strong>Dirección:</strong>Calle Salazar 896 Col Centro. Saltillo Coahuila.
+                            </div>
+                            
+                            <div class="contact-detail">
+                                <i class="fas fa-phone"></i> <strong>Teléfono:</strong> 444-277-85-20
+                            </div>  
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- FIN SECCIÓN CONTACTO-->
+ <!-- SECCION MAPA-->
+<section class="mapa">
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.7430020735287!2d-104.62969329943462!3d24.053464403850995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x869bb7dd2f4fc8af%3A0x502f987a01e3b66!2sUniversidad%20Internacional%20Mexicana!5e1!3m2!1ses-419!2smx!4v1752528934573!5m2!1ses-419!2smx" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</section>
+<!-- FIN SECCION MAPA-->
+
+ <!-- SECCION VIDEO-->
+<section class="video-prom">
+        <div class="video-container">
+            <video autoplay loop muted playsinline class="video-bg">
+                <source src="../../assets/video/vid-prom3.mp4" type="video/mp4">
+                Tu navegador no soporta el video
+            </video>
+        </div>
+
+    
+
+</section>
+<!-- FIN SECCION VIDEO-->
+
+
+
+<!-- footer -->
+   <footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="footer-section">
+                
+                <div class="social-links2">
+                <!-- LOGO UIM-->
+                    <img src="../../assets/images/logo-b.png" alt="">
+                    <br>
+                    <div class="footer-line2"></div>
+                    <br>
+                    <a href="https://www.facebook.com/uimexicana" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/uim_bufalos" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@uimuniversidad"target="_blank" aria-label="Instagram"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Oferta académica</h3>
+                <div class="footer-line2"></div>
+                <ul class="footer-links">
+                    <li><a href="#">Secundaria</a></li>
+                    <li><a href="#">Preparatoria</a></li>
+                    <li><a href="#">Licenciatura</a></li>
+                    <li><a href="#">Maestría</a></li>
+                    <li><a href="#">Posgrados</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Links Directos</h3>
+                <div class="footer-line2"></div>
+                <ul class="footer-links">                                        
+                    <li><a href="https://uim.mx/moo" target="_blank">Plataforma UIM</a></li>
+                    <li><a href="https://sist-control-escolar.com/apex/f?p=205:LOGIN:12168182438217:::::" target="_blank">Control Escolar</a></li>
+                    <li><a href="https://uim.mx/me/" target="_blank">Pagos</a></li>            
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Contacto</h3>
+
+                <div class="footer-line2"></div>
+
+                <p>Calle Amex #131 Fracc. Las Tres Misiones Durango, Durango</p>
+                <p>Tel: 618-156-03-78 </p>
+                <p><a href="mailto:info@uim.edu.mx" style="color: #fff;">vinculacion@uim.mx</a></p>
+            </div>
+            <!--
+            <div class="footer-section">
+                <h3 class="footer-title">Síguenos</h3>
+                <hr style="width: 80%;">
+
+                <div class="social-links">
+                    <a href="https://www.facebook.com/uimexicana" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/uim_bufalos" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@uimuniversidad" aria-label="Instagram"><i class="fab fa-tiktok"></i></a>
+
+                </div>
+            </div>
+                -->
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-line"></div>
+            <p class="footer-copyright">© 2025 Universidad Internacional Mexicana. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+    <!-- Bootstrap JS (includes Popper.js) -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/script.js"></script>
+
+</body>
+</html>
