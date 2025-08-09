@@ -224,6 +224,3 @@ $(function() {
     // Trigger update on page load if a level is pre-selected
     updateProgramList();
 });
-
-//talleres
-
