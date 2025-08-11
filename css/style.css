@@ -828,14 +828,14 @@ display: flex;
  flex: 0 0 auto;
     width: 60px;
     height: 60px;
-    background-image: url('/assets/images/vineta-fub-rojo.png');
+    background-image: url('../assets/images/vineta-fub-rojo.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     transition: background-image 0.4s ease-in-out 0.1s;}
     
 .beneficio-card:hover .beneficio-icon {
-    background-image: url('/assets/images/vineta-fub-blanco.png');
+    background-image: url('../assets/images/vineta-fub-blanco.png');
 }
 .beneficio-icon img {
     width: 60px;
@@ -963,7 +963,7 @@ display: flex;
 
 /* Estadisticas Section */
 .estadisticas {
-    background-image: url(../assets/images/back.jpg);
+    background-image: url("../assets/images/back.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1982,12 +1982,12 @@ display: flex;
     animation: fadeIn 0.5s ease forwards; /* Apply fade-in animation */
 }
 
-.secu-card:nth-child(1) { background-image: url("/assets/images/bene_sec/a_p.png"); animation-delay: 0.3s; }
-.secu-card:nth-child(2) { background-image: url("/assets/images/bene_sec/a_s.png"); animation-delay: 0.5s; }
-.secu-card:nth-child(3) { background-image: url("/assets/images/bene_sec/c_a.png"); animation-delay: 0.7s; }
-.secu-card:nth-child(4) { background-image: url("/assets/images/bene_sec/f_i.png"); animation-delay: 0.9s; }
-.secu-card:nth-child(5) { background-image: url("/assets/images/bene_sec/p_m.png"); animation-delay: 1.1s; }
-.secu-card:nth-child(6) { background-image: url("/assets/images/bene_sec/v_o.png"); animation-delay: 1.3s; }
+.secu-card:nth-child(1) { background-image: url("../assets/images/bene_sec/a_p.png"); animation-delay: 0.3s; }
+.secu-card:nth-child(2) { background-image: url("../assets/images/bene_sec/a_s.png"); animation-delay: 0.5s; }
+.secu-card:nth-child(3) { background-image: url("../assets/images/bene_sec/c_a.png"); animation-delay: 0.7s; }
+.secu-card:nth-child(4) { background-image: url("../assets/images/bene_sec/f_i.png"); animation-delay: 0.9s; }
+.secu-card:nth-child(5) { background-image: url("../assets/images/bene_sec/p_m.png"); animation-delay: 1.1s; }
+.secu-card:nth-child(6) { background-image: url("../assets/images/bene_sec/v_o.png"); animation-delay: 1.3s; }
 
 .secu-card-content {
     position: absolute;
@@ -3123,7 +3123,7 @@ box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 .enca-prep-container {
     height: 650px;
     width: 100%;
-    background-image: url('/assets/images/fondo_enca.png');
+    background-image: url('../assets/images/fondo_enca.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -3391,7 +3391,7 @@ box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     margin-top: 50px;
     border-radius: 30px;
     width: 50%;
-    background-image: url('/assets/images/persona1.jpg');
+    background-image: url('../assets/images/persona1.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
