@@ -227,3 +227,5 @@ $(function() {
 
 //talleres
 
+ // barras animadas
+
