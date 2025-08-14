@@ -1,155 +1,128 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Carousel Hero
     var myCarousel = document.querySelector('#heroCarousel');
-    var carousel = new bootstrap.Carousel(myCarousel, {
-        interval: 5000, // 5 seconds per slide
-        ride: 'carousel'       
-    });
-});
-
-  const track = document.getElementById('programaSliderTrack');
-  const slides = document.querySelectorAll('.programa-slide');
-  const prevBtn = document.querySelector('.programa-prev');
-  const nextBtn = document.querySelector('.programa-next');
-
-  let currentIndex = 0;
-  let autoSlideInterval;
-
-  function getVisibleSlidesCount() {
-    const containerWidth = document.querySelector('.programa-slider-container').offsetWidth;
-    const slideWidth = slides[0].offsetWidth + 20; // incluir márgenes
-    return Math.floor(containerWidth / slideWidth);
-  }
-
-  function updateSlider() {
-    const slideWidth = slides[0].offsetWidth + 20;
-    const offset = -slideWidth * currentIndex;
-    track.style.transform = `translateX(${offset}px)`;
-  }
-
-  function goToNextSlide() {
-    const visibleCount = getVisibleSlidesCount();
-    const maxIndex = slides.length - visibleCount;
-    if (currentIndex < maxIndex) {
-      currentIndex++;
-    } else {
-      currentIndex = 0;
+    if(myCarousel) {
+        var carousel = new bootstrap.Carousel(myCarousel, {
+            interval: 5000,
+            ride: 'carousel'       
+        });
     }
-    updateSlider();
-  }
 
-  function goToPrevSlide() {
-    const visibleCount = getVisibleSlidesCount();
-    const maxIndex = slides.length - visibleCount;
-    if (currentIndex > 0) {
-      currentIndex--;
-    } else {
-      currentIndex = maxIndex;
-    }
-    updateSlider();
-  }
+    // Programa Slider
+    const track = document.getElementById('programaSliderTrack');
+    if(track) {
+        const slides = document.querySelectorAll('.programa-slide');
+        const prevBtn = document.querySelector('.programa-prev');
+        const nextBtn = document.querySelector('.programa-next');
 
-  function startAutoSlide() {
-    autoSlideInterval = setInterval(goToNextSlide, 3000);
-  }
+        let currentIndex = 0;
+        let autoSlideInterval;
 
-  function stopAutoSlide() {
-    clearInterval(autoSlideInterval);
-  }
-
-  nextBtn.addEventListener('click', () => {
-    stopAutoSlide();
-    goToNextSlide();
-    startAutoSlide();
-  });
-
-  prevBtn.addEventListener('click', () => {
-    stopAutoSlide();
-    goToPrevSlide();
-    startAutoSlide();
-  });
-
-  window.addEventListener('resize', updateSlider);
-
-  startAutoSlide();
-
-
-  // Estadisticas Counter Animation
-const counters = document.querySelectorAll('.estadistica-number');
-const speed = 200; // Adjust speed of counting (lower is faster)
-
-const animateCounters = (counter) => {
-    const target = +counter.getAttribute('data-target');
-    const increment = target / speed;
-    let count = 0;
-
-    const updateCount = () => {
-        count += increment;
-        if (count < target) {
-            counter.innerText = Math.ceil(count);
-            setTimeout(updateCount, 20);
-        } else {
-            counter.innerText = target;
+        function getVisibleSlidesCount() {
+            const containerWidth = document.querySelector('.programa-slider-container').offsetWidth;
+            const slideWidth = slides[0].offsetWidth + 20;
+            return Math.floor(containerWidth / slideWidth);
         }
-    };
 
-    updateCount();
-};
+        function updateSlider() {
+            const slideWidth = slides[0].offsetWidth + 20;
+            const offset = -slideWidth * currentIndex;
+            track.style.transform = `translateX(${offset}px)`;
+        }
 
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const countersInView = entry.target.querySelectorAll('.estadistica-number');
-            countersInView.forEach(counter => {
-                if (!counter.hasAttribute('data-animated')) {
-                    counter.setAttribute('data-animated', 'true');
-                    animateCounters(counter);
-                }
+        function goToNextSlide() {
+            const visibleCount = getVisibleSlidesCount();
+            const maxIndex = slides.length - visibleCount;
+            if (currentIndex < maxIndex) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+            updateSlider();
+        }
+
+        function goToPrevSlide() {
+            const visibleCount = getVisibleSlidesCount();
+            const maxIndex = slides.length - visibleCount;
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = maxIndex;
+            }
+            updateSlider();
+        }
+
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(goToNextSlide, 3000);
+        }
+
+        function stopAutoSlide() {
+            clearInterval(autoSlideInterval);
+        }
+
+        if(nextBtn) nextBtn.addEventListener('click', () => {
+            stopAutoSlide();
+            goToNextSlide();
+            startAutoSlide();
+        });
+
+        if(prevBtn) prevBtn.addEventListener('click', () => {
+            stopAutoSlide();
+            goToPrevSlide();
+            startAutoSlide();
+        });
+
+        window.addEventListener('resize', updateSlider);
+        startAutoSlide();
+    }
+
+    // Estadisticas Counter Animation
+    const statNumbers = document.querySelectorAll('.stat-number');
+    if(statNumbers.length > 0) {
+        function animateNumbers() {
+            statNumbers.forEach(number => {
+                const target = parseInt(number.getAttribute('data-target'));
+                const duration = 2000;
+                const increment = target / (duration / 16);
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        clearInterval(timer);
+                        current = target;
+                        number.classList.add('animated');
+                    }
+                    number.textContent = Math.floor(current);
+                }, 16);
             });
         }
-    });
-}, { threshold: 0.5 });
+        
+        // Usar Intersection Observer para animar solo cuando son visibles
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateNumbers();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
 
-const estadisticasSection = document.querySelector('.estadisticas');
-if (estadisticasSection) {
-    observer.observe(estadisticasSection);
-}
+        // Observar el contenedor padre de las estadísticas
+        const statsContainer = document.querySelector('.stats-container');
+        if(statsContainer) {
+            observer.observe(statsContainer);
+        } else {
+            // Si no hay contenedor, animar directamente
+            animateNumbers();
+        }
+    }
 
+   
 
-// TESTIMONIAL
-
-jQuery(document).ready(function($) {
-        		"use strict";
-        		//  TESTIMONIALS CAROUSEL HOOK
-		        $('#customers-testimonials').owlCarousel({
-		            loop: true,
-		            center: true,
-		            items: 3,
-		            margin: 0,
-		            autoplay: true,
-		            dots:true,
-		            autoplayTimeout: 8500,
-		            smartSpeed: 450,
-		            responsive: {
-		              0: {
-		                items: 1
-		              },
-		              768: {
-		                items: 2
-		              },
-		              1170: {
-		                items: 3
-		              }
-		            }
-		        });
-        	});
-
-// FIN TESTIMONIAL
-
-
-$(function() {
-    // Use Bootstrap 5 native validation
+    // Contact Form
     const form = document.getElementById('contact-form');
-    if (form) {
+    if(form) {
         form.addEventListener('submit', function(e) {
             if (!form.checkValidity()) {
                 e.preventDefault();
@@ -158,9 +131,8 @@ $(function() {
             form.classList.add('was-validated');
 
             if (form.checkValidity()) {
-                e.preventDefault(); // Prevent default for demo
+                e.preventDefault();
                 var url = "contact.php";
-
                 var messageAlert = "alert-success";
                 var messageText = "Tu mensaje ha sido enviado correctamente, nos comunicaremos contigo pronto.";
 
@@ -177,55 +149,77 @@ $(function() {
         });
     }
 
-    // Function to update program list based on educational level
+    // Function to update program list
     window.updateProgramList = function() {
-        var level = document.getElementById("form_level").value;
+        var level = document.getElementById("form_level");
         var programSelect = document.getElementById("form_program");
-        programSelect.innerHTML = '<option value="">Selecciona tu programa de interes... *</option>'; // Reset to default
+        
+        if(level && programSelect) {
+            programSelect.innerHTML = '<option value="">Selecciona tu programa de interes... *</option>';
+            
+            if (level.value === "Secundaria" || level.value === "Preparatoria") {
+                programSelect.value = "";
+                programSelect.disabled = true;
+            } else {
+                programSelect.disabled = false;
+                let jsonUrl = '';
+                
+                if (level.value === "Licenciatura") {
+                    jsonUrl = 'programas/lic.json';
+                } else if (level.value === "Maestría") {
+                    jsonUrl = 'programas/maes.json';
+                } else if (level.value === "Doctorado") {
+                    jsonUrl = 'programas/doct.json';
+                }
 
-        if (level === "Secundaria" || level === "Preparatoria") {
-             programSelect.value = ""; // Clear selection
-            programSelect.disabled = true; // Disable the select
-        } else {
-            programSelect.disabled = false; // Enable the select
-            let jsonUrl = '';
-            if (level === "Licenciatura") {
-                jsonUrl = 'programas/lic.json';
-            } else if (level === "Maestría") {
-                jsonUrl = 'programas/maes.json';
-            } else if (level === "Doctorado") {
-                jsonUrl = 'programas/doct.json';
-            }
-
-            if (jsonUrl) {
-                fetch(jsonUrl)
-                    .then(response => {
-                        if (!response.ok) throw new Error('Network response was not ok');
-                        return response.json();
-                    })
-                    .then(programs => {
-                        programs.forEach(function(program) {
-                            var option = document.createElement("option");
-                            option.value = program;
-                            option.text = program;
-                            programSelect.appendChild(option);
-
-                          });
-                    })
-                    .catch(error => {
-                        console.error('Error fetching programs:', error);
-                        // Fallback to empty list on error
-                        programSelect.value = ""; // Clear on error
-                    });
+                if (jsonUrl) {
+                    fetch(jsonUrl)
+                        .then(response => {
+                            if (!response.ok) throw new Error('Network response was not ok');
+                            return response.json();
+                        })
+                        .then(programs => {
+                            programs.forEach(function(program) {
+                                var option = document.createElement("option");
+                                option.value = program;
+                                option.text = program;
+                                programSelect.appendChild(option);
+                            });
+                        })
+                        .catch(error => {
+                            console.error('Error fetching programs:', error);
+                            programSelect.value = "";
+                        });
+                }
             }
         }
     };
 
-    // Trigger update on page load if a level is pre-selected
+    // Initialize program list
     updateProgramList();
 });
 
-//talleres
+// Talleres (si es necesario)
+// barras animadas
 
- // barras animadas
+ // TESTIMONIAL
+    if(typeof jQuery !== 'undefined' && jQuery.fn.owlCarousel) {
+        jQuery('#customers-testimonials').owlCarousel({
+            loop: true,
+            center: true,
+            items: 3,
+            margin: 0,
+            autoplay: true,
+            dots: true,
+            autoplayTimeout: 8500,
+            smartSpeed: 450,
+            responsive: {
+                0: { items: 1 },
+                768: { items: 2 },
+                1170: { items: 3 }
+            }
+        });
+    }
+
+
 

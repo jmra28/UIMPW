@@ -1,115 +1,171 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Navbar + Logo Fijo con Movimiento</title>
+<!-- TESTIMONIOS -->
+<section class="com-uim-testimonials">
+  <div class="com-uim-container">
+    <div class="com-uim-row">
+      <div class="com-uim-col-sm-12">
+        <div id="com-uim-customers-testimonials" class="owl-carousel">
+
+          <!-- TESTIMONIO 1 -->
+          <div class="com-uim-item">
+            <div class="com-uim-shadow-effect">
+              <img class="com-uim-img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
+              <p>Dramáticamente mantienen soluciones click-and-mortar sin soluciones funcionales. Sinergizan completamente relaciones fiscales vía nichos de mercado premier.</p>
+            </div>
+            <div class="com-uim-testimonial-name">EMILIANO AQUILANI</div>
+          </div>
+          <!-- FIN TESTIMONIO 1 -->
+
+          <!-- TESTIMONIO 2 -->
+          <div class="com-uim-item">
+            <div class="com-uim-shadow-effect">
+              <img class="com-uim-img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
+              <p>Dramáticamente mantienen soluciones click-and-mortar sin soluciones funcionales. Sinergizan completamente relaciones fiscales vía nichos de mercado premier.</p>
+            </div>
+            <div class="com-uim-testimonial-name">ANNA ITURBE</div>
+          </div>
+          <!-- FIN TESTIMONIO 2 -->
+
+          <!-- TESTIMONIO 3 -->
+          <div class="com-uim-item">
+            <div class="com-uim-shadow-effect">
+              <img class="com-uim-img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
+              <p>Dramáticamente mantienen soluciones click-and-mortar sin soluciones funcionales. Sinergizan completamente relaciones fiscales vía nichos de mercado premier.</p>
+            </div>
+            <div class="com-uim-testimonial-name">LARA ATKINSON</div>
+          </div>
+          <!-- FIN TESTIMONIO 3 -->
+
+          <!-- TESTIMONIO 4 -->
+          <div class="com-uim-item">
+            <div class="com-uim-shadow-effect">
+              <img class="com-uim-img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
+              <p>Dramáticamente mantienen soluciones click-and-mortar sin soluciones funcionales. Sinergizan completamente relaciones fiscales vía nichos de mercado premier.</p>
+            </div>
+            <div class="com-uim-testimonial-name">IAN OWEN</div>
+          </div>
+          <!-- FIN TESTIMONIO 4 -->
+
+          <!-- TESTIMONIO 5 -->
+          <div class="com-uim-item">
+            <div class="com-uim-shadow-effect">
+              <img class="com-uim-img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
+              <p>Dramáticamente mantienen soluciones click-and-mortar sin soluciones funcionales. Sinergizan completamente relaciones fiscales vía nichos de mercado premier.</p>
+            </div>
+            <div class="com-uim-testimonial-name">MICHAEL TEDDY</div>
+          </div>
+          <!-- FIN TESTIMONIO 5 -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- FIN TESTIMONIOS -->
+
+<!-- CSS -->
 <style>
-    /* --- RESET SIMPLE --- */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+.com-uim-shadow-effect {
+  background: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  text-align: center;
+  border: 1px solid #ECECEC;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.10), 0 15px 12px rgba(0,0,0,0.02);
+}
 
-    /* --- NAVBAR --- */
-    .navbar {
-        background-color: #333;
-        color: white;
-        padding: 15px 20px;
-        font-size: 18px;
-        z-index: 1000;
-        position: relative;
-    }
+#com-uim-customers-testimonials .com-uim-shadow-effect p {
+  font-family: inherit;
+  font-size: 17px;
+  line-height: 1.5;
+  margin: 0 0 17px 0;
+  font-weight: 300;
+}
 
-    /* --- SLIDER --- */
-    .slider {
-        width: 100%;
-        height: 350px;
-        overflow: hidden;
-    }
-    .slider img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-    }
+.com-uim-testimonial-name {
+  margin: -17px auto 0;
+  display: table;
+  width: auto;
+  background: #3190E7;
+  padding: 9px 35px;
+  border-radius: 12px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 9px 18px rgba(0,0,0,0.12), 0 5px 7px rgba(0,0,0,0.05);
+}
 
-    /* --- LOGO FIJO --- */
-    .logo-overlay {
-        position: fixed;
-        top: 50px;  /* posición inicial debajo del navbar */
-        right: 20px;
-        z-index: 2000;
-        width: 120px;
-        background: white;
-        padding: 5px;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        transition: top 0.3s ease; /* animación suave */
-    }
+#com-uim-customers-testimonials .com-uim-item {
+  text-align: center;
+  padding: 50px;
+  margin-bottom: 80px;
+  opacity: .2;
+  transform: scale3d(0.8, 0.8, 1);
+  transition: all 0.3s ease-in-out;
+}
 
-    /* --- Cuando el logo debe pegarse arriba --- */
-    .logo-fixed {
-        top: 0px; /* pegado al borde superior */
-    }
+#com-uim-customers-testimonials .owl-item.active.center .com-uim-item {
+  opacity: 1;
+  transform: scale3d(1.0, 1.0, 1);
+}
 
-    /* --- CONTENIDO DE PRUEBA --- */
-    .contenido {
-        padding: 20px;
-        line-height: 1.6;
-        height: 1500px; /* para probar el scroll */
-    }
+.owl-carousel .owl-item .com-uim-img-circle {
+  transform-style: preserve-3d;
+  max-width: 90px;
+  margin: 0 auto 17px;
+  border-radius: 50%;
+}
+
+#com-uim-customers-testimonials.owl-carousel .owl-dots .owl-dot.active span,
+#com-uim-customers-testimonials.owl-carousel .owl-dots .owl-dot:hover span {
+  background: #3190E7;
+  transform: translate3d(0px, -50%, 0px) scale(0.7);
+}
+
+#com-uim-customers-testimonials.owl-carousel .owl-dots {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+#com-uim-customers-testimonials.owl-carousel .owl-dots .owl-dot {
+  display: inline-block;
+}
+
+#com-uim-customers-testimonials.owl-carousel .owl-dots .owl-dot span {
+  background: #3190E7;
+  display: inline-block;
+  height: 20px;
+  margin: 0 2px 5px;
+  transform: translate3d(0px, -50%, 0px) scale(0.3);
+  transform-origin: 50% 50% 0;
+  transition: all 250ms ease-out 0s;
+  width: 20px;
+}
 </style>
-</head>
-<body>
 
-    <!-- NAVBAR -->
-    <div class="navbar">
-        Menú de Navegación
-    </div>
-
-    <!-- LOGO FIJO -->
-    <img src="https://via.placeholder.com/120x60?text=LOGO" alt="Logo Empresa" class="logo-overlay" id="logo">
-
-    <!-- SLIDER -->
-    <div class="slider">
-        <img src="https://picsum.photos/id/1018/1000/350" alt="Imagen Slider 1">
-    </div>
-
-    <!-- CONTENIDO DE PRUEBA -->
-    <div class="contenido">
-        <p>Haz scroll para ver cómo el logo sube hasta el borde superior cuando el navbar desaparece.</p>
-    </div>
-
-    
-<br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br>
-
-    <!-- SCRIPT PARA DETECTAR SCROLL -->
-    <script>
-        const logo = document.getElementById('logo');
-        const triggerHeight = 50; // altura de scroll para que el logo suba
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > triggerHeight) {
-                logo.classList.add('logo-fixed');
-            } else {
-                logo.classList.remove('logo-fixed');
-            }
-        });
-    </script>
-
-</body>
-</html>
-
-
-
+<!-- JS -->
+<script>
+jQuery(document).ready(function($) {
+  "use strict";
+  $('#com-uim-customers-testimonials').owlCarousel({
+    loop: true,
+    center: true,
+    items: 3,
+    margin: 0,
+    autoplay: true,
+    dots: true,
+    autoplayTimeout: 8500,
+    smartSpeed: 450,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 2
+      },
+      1170: {
+        items: 3
+      }
+    }
+  });
+});
+</script>
