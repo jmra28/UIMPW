@@ -223,3 +223,44 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+    // Estadisticas Counter Animation
+const counters = document.querySelectorAll('.estadistica-number');
+const speed = 200; // Adjust speed of counting (lower is faster)
+
+const animateCounters = (counter) => {
+    const target = +counter.getAttribute('data-target');
+    const increment = target / speed;
+    let count = 0;
+
+    const updateCount = () => {
+        count += increment;
+        if (count < target) {
+            counter.innerText = Math.ceil(count);
+            setTimeout(updateCount, 20);
+        } else {
+            counter.innerText = target;
+        }
+    };
+
+    updateCount();
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const countersInView = entry.target.querySelectorAll('.estadistica-number');
+            countersInView.forEach(counter => {
+                if (!counter.hasAttribute('data-animated')) {
+                    counter.setAttribute('data-animated', 'true');
+                    animateCounters(counter);
+                }
+            });
+        }
+    });
+}, { threshold: 0.5 });
+
+const estadisticasSection = document.querySelector('.estadisticas');
+if (estadisticasSection) {
+    observer.observe(estadisticasSection);
+}
+
