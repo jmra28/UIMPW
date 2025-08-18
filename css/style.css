@@ -1,14 +1,22 @@
+@font-face {
+  font-family: 'Gotham';
+  src: url('../assets/fonts/GOTHAM-LIGHT.TTF') format('ttf');
+       
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('../assets/fonts/GOTHAM-BOLD.TTF') format('ttf');    
+  font-weight: bold;
+  font-style: normal;
+
+}
 /* Custom styles for the website */
 body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
-}
-.testimonials{
-  align-items: flex-start;
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  flex-direction: column; /* Stack children vertically */
 }
 
 /* Header styles */
@@ -27,7 +35,7 @@ body {
 .nav-link {
     color: rgb(34, 40, 87)  !important; /* Modify text color here */
     font-size: 1rem; /* Modify font size here */
-    font-weight: 500;
+    font-weight: 700;
     text-transform: uppercase;
     margin: 0 15px;
     font-family: 'Gothan', sans-serif;
@@ -59,6 +67,7 @@ body {
 .dropdown-item {
     color: rgb(34, 40, 87); /* Modify dropdown item text color here */
     font-size: 0.9rem; /* Modify dropdown item font size here */
+    
 }
 
 .dropdown-item:hover {
@@ -67,23 +76,24 @@ body {
 }
 
 /* Button styles */
+
 .btn-alumnos {
     background: #252B68;
     background: linear-gradient(180deg,rgba(37, 43, 104, 1) 0%, rgba(37, 43, 104, 0.77) 100%);
-    color: white;
+    color: white  !important;
     border-radius: 10px;
     padding: 8px 20px;
     font-size: 0.9rem;
     text-transform: uppercase;
     box-shadow: 0px 0px 10px grey; 
-          text-decoration: none;
+    text-decoration: none;
    
 }
 
 .btn-alumnos:hover {
     background: #961820;
     background: linear-gradient(180deg,rgba(150, 24, 32, 1) 0%, rgba(234, 29, 44, 1) 100%);
-    color: white;
+    color: white  !important;
 }
 
 .btn-empresas {
@@ -92,7 +102,7 @@ body {
     box-shadow: 0px 0px 10px grey;
     background: #961820;
     background: linear-gradient(180deg,rgba(150, 24, 32, 1) 0%, rgba(234, 29, 44, 1) 100%);
-    color: white;
+    color: white !important;
     border-radius: 10px;
     padding: 8px 20px;
     font-size: 0.9rem;
@@ -102,7 +112,7 @@ body {
 .btn-empresas:hover {
     background: #252B68;
     background: linear-gradient(180deg,rgba(37, 43, 104, 1) 0%, rgba(37, 43, 104, 0.77) 100%);      
-    color: white;
+    color: white  !important;
 }
 
 /* Video Background */
@@ -654,7 +664,7 @@ height: 150px;
     font-weight: 900;
     text-transform: uppercase;
     font-family: 'Gothan', sans-serif;
-    margin-left: 2%;
+    margin-left: 3.8%;
     
 }
 
@@ -823,11 +833,14 @@ height: 150px;
 .faq-section {
     padding: 40px 0;
     background-color: #f5f5f5;
+    font-family: 'Gothan', sans-serif;
+
 }
 
 .faq-container {
     margin-top: 30px;
     margin-bottom: 50px;
+    font-family: 'Gothan', sans-serif;
 }
 
 .faq-nav {
@@ -843,17 +856,20 @@ height: 150px;
     border: none;
     border-bottom: 3px solid transparent;
     transition: all 0.3s ease;
+    font-family: 'Gothan', sans-serif;
 }
 
 .faq-nav .nav-link:hover {
     color: #ea1d2c;
     border-bottom-color: rgba(193, 39, 45, 0.3);
+    font-family: 'Gothan', sans-serif;
 }
 
 .faq-nav .nav-link.active {
     color: #ea1d2c;
     background-color: transparent;
     border-bottom-color: #ea1d2c;
+    font-family: 'Gothan', sans-serif;
 }
 
 /* Estilo para el contenido de las pestañas */
@@ -864,10 +880,12 @@ height: 150px;
     padding: 20px;
     background-color: #ffffff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Gothan', sans-serif;
 }
 
 /* Estilo para los acordeones */
 .accordion .card {
+    font-family: 'Gothan', sans-serif;
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 0;
@@ -875,6 +893,7 @@ height: 150px;
 }
 
 .accordion .card-header {
+    font-family: 'Gothan', sans-serif;
     padding: 0;
     background-color: transparent;
     border-bottom: none;
@@ -887,14 +906,14 @@ height: 150px;
     text-align: left;
     color: #333;
     font-weight: 500;
-    font-family: 'Font Awesome 5 Free';
+    font-family: 'Gothan', sans-serif;    
     text-decoration: none;
     position: relative;
 }
 
 .accordion .btn-link:after {
     content: '\f078';
-    font-family: 'Font Awesome 5 Free';
+    font-family: 'Gothan', sans-serif;
     font-weight: 900;
     position: absolute;
     right: 20px;
@@ -913,7 +932,7 @@ height: 150px;
 .accordion .card-body {
     padding: 15px 20px;
     background-color: #f8f9fa;
-    font-family: 'Font Awesome 5 Free';
+    font-family: 'Gothan', sans-serif;
     color: #222857;
 }
 
@@ -974,19 +993,19 @@ height: 150px;
     font-weight: 900;
     text-transform: uppercase;
     margin-top: 10px; /* Space between the two lines */
-    font-family: 'Gothan', sans-serif;
+    font-family: 'Gotham', sans-serif;
 }
 .p-contact-texto3{
     color: #222857;
     font-size: 1.8rem;
     font-weight: 900;
-    font-family: 'Gothan', sans-serif;
+    font-family: 'Gotham', sans-serif;
 }
 .p-contact-texto4{
     color: #ea1d2c;
     font-size: 1.8rem;
     font-weight: 900;
-    font-family: 'Gothan', sans-serif;
+    font-family: 'Gotham', sans-serif;
 }
 
 
@@ -997,14 +1016,14 @@ height: 150px;
 }
 
 .contact-section .form-group label {
-    font-family: 'Gothan', sans-serif;
+    font-family: 'Gotham', sans-serif;
     color: rgb(34, 40, 87);
     font-weight: 500;
     font-size: 17px;
 }
 
 .contact-section .form-control {
-    font-family: 'Gothan', sans-serif;
+    font-family: 'Gotham', sans-serif;
     border: 1px solid rgba(34, 40, 87, 0.2);
     border-radius: 5px;
     padding: 10px;
@@ -1025,7 +1044,7 @@ height: 150px;
     border-color: #ea1d2c;
     color: #ffffff;
     padding: 10px 20px;
-    font-family: 'Gothan', sans-serif;
+    font-family: 'Gotham', sans-serif;
     font-weight: 700;
     transition: all 0.3s ease;
 }
@@ -1067,7 +1086,7 @@ height: 150px;
 }
 
 .contact-section .contact-info {
-    font-family: 'Gothan', sans-serif;
+    font-family: 'Gotham', sans-serif;
     color: #222857;
     padding: 20px;
     border: 1px solid rgba(34, 40, 87, 0.1);
@@ -1203,7 +1222,7 @@ height: 150px;
     background-color: #030936;
     color: #fff;
     padding: 30px 0 20px;
-    font-family: 'Gothan', sans-serif;
+    font-family: 'Gotham', sans-serif;
 }
 
 .footer-top {
@@ -1739,7 +1758,7 @@ height: 150px;
 .identidad-bufalo-subtitle {
     font-size: 2rem;
     margin-bottom: 15px;
-    font-family: 'Gothan', sans-serif;
+    font-family: 'Gotham', sans-serif;
     font-weight: 700;
 }
 
@@ -2056,7 +2075,7 @@ margin-left: 22%;
     color: #fff;
     font-size: 14px;
     margin: 5px;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Gotham', sans-serif;
 }
 
 .teacher-card:hover .teacher-info h3 {
@@ -2066,7 +2085,7 @@ margin-left: 22%;
 .teacher-info p {
     color: #fff;
     margin-top: 10px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Gotham', sans-serif;
     font-weight: 300;
     font-size: 12px;
 }
@@ -2074,7 +2093,7 @@ margin-left: 22%;
 .teacher-text {
     color: #fff;
     padding: 0 10px 5px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Gotham', sans-serif;
     font-size: 12px;
 }
 
@@ -2126,7 +2145,7 @@ margin-left: 22%;
     font-size: 2.5rem;
     font-weight: 900;
     text-transform: uppercase;
-    font-family: 'Gothan', sans-serif;
+    font-family: 'Gotham', sans-serif;
     
 }
 .barra-texto-rojo-pasos {
@@ -2134,7 +2153,7 @@ margin-left: 22%;
     font-size:2.5rem;
     font-weight: 900;
     text-transform: uppercase;
-    font-family: 'Gothan', sans-serif;
+    font-family: 'Gotham', sans-serif;
 
 }
 .bar-anim-info {
@@ -3071,7 +3090,7 @@ cursor: pointer;
     font-weight: 900;
     color: #ea1d2c;
     margin-bottom: 10px;
-    font-family:Arial, Helvetica, sans-serif ;
+    font-family:'Gotham', sans-serif ;
 
 }
 
@@ -3081,7 +3100,7 @@ cursor: pointer;
     font-weight: 900;
     color: #ea1d2c;
     margin-left: 5px;
-    font-family:Arial, Helvetica, sans-serif ;
+    font-family:'Gotham', sans-serif ;
 
 }
 
@@ -3091,7 +3110,7 @@ cursor: pointer;
     font-size: 1.4rem;
     font-weight: 900;
     text-transform: uppercase;
-    font-family:Arial, Helvetica, sans-serif ;
+    font-family:'Gotham', sans-serif ;
 }
 
 .texto-rojo-num {
@@ -3099,7 +3118,7 @@ cursor: pointer;
     font-size: 1.4rem;
     font-weight: 900;
     text-transform: uppercase;
-    font-family:Arial, Helvetica, sans-serif ;
+    font-family:'Gotham', sans-serif ;
 
 }
 
@@ -3151,7 +3170,7 @@ cursor: pointer;
     font-size: 1.4rem;
     font-weight: 900;
     text-transform: uppercase;
-    font-family: 'Gothan', sans-serif;
+    font-family:'Gotham', sans-serif ;
     
 }
 
@@ -3160,7 +3179,7 @@ cursor: pointer;
     font-size: 1.4rem;
     font-weight: 900;
     text-transform: uppercase;
-    font-family: 'Gothan', sans-serif;
+    font-family:'Gotham', sans-serif ;
 }
 
     #vid_inf_container {
@@ -3331,14 +3350,29 @@ cursor: pointer;
 
 
 /* TESTIMONIAL*/
+
+.testimonials{
+  align-items: flex-start;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  flex-direction: column; /* Stack children vertically */
+}
+
+.testimonios{
+    width: 100%;
+    height: auto;    
+}
+
 .shadow-effect {
 		    background: #fff;
 		    padding: 20px;
 		    border-radius: 4px;
 		    text-align: center;
-	border:1px solid #ECECEC;
+	        border:1px solid #ECECEC;
 		    box-shadow: 0 19px 38px rgba(0,0,0,0.10), 0 15px 12px rgba(0,0,0,0.02);
 		}
+
 		#customers-testimonials .shadow-effect p {
 		    font-family: inherit;
 		    font-size: 17px;
@@ -3346,6 +3380,7 @@ cursor: pointer;
 		    margin: 0 0 17px 0;
 		    font-weight: 300;
 		}
+
 		.testimonial-name {
 		    margin: -17px auto 0;
 		    display: table;
@@ -3357,10 +3392,31 @@ cursor: pointer;
 		    color: #fff;
 		    box-shadow: 0 9px 18px rgba(0,0,0,0.12), 0 5px 7px rgba(0,0,0,0.05);
 		}
-		#customers-testimonials .item {
+
+        #customers-testimonials .item2{
+            background: #9598B5;
+            background: linear-gradient(361deg,rgba(149, 152, 181, 0.82) 0%, rgba(87, 92, 139, 1) 37%, rgba(37, 43, 104, 1) 100%);            
+            border-radius: 15px;
+            height: 300px;
+            width: 470px;
 		    text-align: center;
-		    padding: 50px;
-				margin-bottom:80px;
+			margin-bottom:80px;
+		    opacity: .2;
+		    -webkit-transform: scale3d(0.8, 0.8, 1);
+		    transform: scale3d(0.8, 0.8, 1);
+		    -webkit-transition: all 0.3s ease-in-out;
+		    -moz-transition: all 0.3s ease-in-out;
+		    transition: all 0.3s ease-in-out;
+        }
+
+		#customers-testimonials .item {
+            border-radius: 15px;
+            background: #d4d4d4;
+            background: linear-gradient(360deg,rgba(212, 212, 212, 1) 0%, rgba(249, 249, 249, 1) 62%, rgba(255, 255, 255, 1) 100%);
+            height: 300px;
+            width: 470px;
+		    text-align: center;
+			margin-bottom:80px;
 		    opacity: .2;
 		    -webkit-transform: scale3d(0.8, 0.8, 1);
 		    transform: scale3d(0.8, 0.8, 1);
@@ -3368,31 +3424,41 @@ cursor: pointer;
 		    -moz-transition: all 0.3s ease-in-out;
 		    transition: all 0.3s ease-in-out;
 		}
-		#customers-testimonials .owl-item.active.center .item {
+		#customers-testimonials .owl-item.active.center .item  {
 		    opacity: 1;
 		    -webkit-transform: scale3d(1.0, 1.0, 1);
 		    transform: scale3d(1.0, 1.0, 1);
 		}
+        #customers-testimonials .owl-item.active.center .item2  {
+		    opacity: 1;
+		    -webkit-transform: scale3d(1.0, 1.0, 1);
+		    transform: scale3d(1.0, 1.0, 1);
+		}
+
 		.owl-carousel .owl-item img {
 		    transform-style: preserve-3d;
-		    max-width: 90px;
+		    max-width: 100%;
     		margin: 0 auto 17px;
+            background-color: #252b68;
 		}
 		#customers-testimonials.owl-carousel .owl-dots .owl-dot.active span,
 #customers-testimonials.owl-carousel .owl-dots .owl-dot:hover span {
-		    background: #3190E7;
+		    background: #ea1d2c;
 		    transform: translate3d(0px, -50%, 0px) scale(0.7);
 		}
+
 #customers-testimonials.owl-carousel .owl-dots{
 	display: inline-block;
 	width: 100%;
 	text-align: center;
 }
+
 #customers-testimonials.owl-carousel .owl-dots .owl-dot{
 	display: inline-block;
 }
+
 		#customers-testimonials.owl-carousel .owl-dots .owl-dot span {
-		    background: #3190E7;
+		    background: #252b68;
 		    display: inline-block;
 		    height: 20px;
 		    margin: 0 2px 5px;
@@ -3401,6 +3467,159 @@ cursor: pointer;
 		    transition: all 250ms ease-out 0s;
 		    width: 20px;
 		}
+
+/*tarjetas de testimonio*/
+.info-prep-section {
+    padding: 0;
+}
+
+.info-prep-container {
+    border-radius: 15px;
+    width: 470px;
+    height: 300px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    z-index: 999; /* Debajo de la imagen fija (z-index: 1000) y header (z-index: 1001) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-prep-left {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding-left: 10px;
+}
+
+.info-prep-right {
+    padding-left: 10px;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.info-prep-left img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius:0 0 100px 100px;
+}
+
+
+
+.info-prep-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color:#ea1d2c;
+    margin: 0 0 8px 0;
+    letter-spacing: 0px;
+}
+
+.info-prep-subtitle {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 8px 0;
+        letter-spacing: 0px;
+
+}
+
+.info-prep-subtitle2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 8px 0;
+        letter-spacing: 0px;
+
+}
+
+.info-prep-text {
+    font-size: 0.95rem;
+    color: #666;
+    margin: 0;
+        letter-spacing: 0px;
+
+}
+
+.info-prep-text2 {
+    font-size: 0.95rem;
+    color: #ffffff;
+    margin: 0;
+}
+
+
+/* Ajustes responsivos */
+@media (max-width: 991px) {
+    .info-prep-section {
+        margin-top: 80px;
+    }
+
+    .info-prep-container {
+        width: 400px;
+        height: 280px;
+    }
+
+    .info-prep-title {
+        font-size: 1.4rem;
+    }
+
+    .info-prep-subtitle {
+        font-size: 1rem;
+    }
+
+    .info-prep-text {
+        font-size: 0.75rem;
+    }
+
+    .info-prep-right {
+        padding: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .info-prep-section {
+        margin-top: 70px;
+    }
+
+    .info-prep-container {
+        width: 90%;
+        height: auto;
+        min-height: 250px;
+        flex-direction: column;
+    }
+
+    .info-prep-left {
+        width: 100%;
+        height: 50%;
+        min-height: 125px;
+    }
+
+    .info-prep-right {
+        width: 100%;
+        height: 50%;
+        min-height: 125px;
+        padding: 10px;
+    }
+
+    .info-prep-title {
+        font-size: 1.2rem;
+    }
+
+    .info-prep-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .info-prep-text {
+        font-size: 0.7rem;
+    }
+}
+/* fin tarjetas de comentarios*/
 
 /* FIN TESTIMONIAL */
 
