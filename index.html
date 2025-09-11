@@ -589,72 +589,181 @@
 
 <!-- PASOS  -->
   
-<section class="pasos">
-     <div class="pasos-titulos">
-            <span class="texto-azul-pasos">ESTAS A  </span><span class="texto-rojo-pasos"> 3 PASOS DEL ÉXITO PROFESIONAL</span>					    
-			<span class="texto-rojo-2-pasos">AQUÍ COMIENZA TU CAMINO PARA UN FUTURO MEJOR</span>            
-        </div>
-    <div class="container">    
-
-        <video autoplay muted loop id="pasos-video" class="pasos-video">
-            <source src="assets/video/particulas4.mp4" type="video/mp4">
-            Tu navegador no soporta el video.
-        </video>
-
-       
-      <div class="row">
-     
     <section class="pasos">
-    <div class="pasos-container">
+        <div class="pasos-titulos">
+                <span class="texto-azul-pasos">ESTAS A  </span><span class="texto-rojo-pasos"> 3 PASOS DEL ÉXITO PROFESIONAL</span>					    
+                <span class="texto-rojo-2-pasos">AQUÍ COMIENZA TU CAMINO PARA UN FUTURO MEJOR</span>            
+            </div>
+        <div class="container">    
 
-    <div class="uim-steps-container">
-    <div class="uim-step">
-      <div class="uim-step-icon">📝</div>
-      <h3>Haz tu Test</h3>
-      <p>Llena nuestro formulario inicial para comenzar tu proceso de inscripción en UIM.</p>
-    
-    <button class="entrar-bttn">
-                    <i class="fas fa-eye entrar-icon"></i>
-                    Contactar
-    </button>
-      <svg class="uim-arrow" viewBox="0 0 24 24">
-        <path d="M13 5l7 7-7 7M5 12h14"/>
-      </svg>
-    </div>
+            <video autoplay muted loop id="pasos-video" class="pasos-video">
+                <source src="assets/video/particulas4.mp4" type="video/mp4">
+                Tu navegador no soporta el video.
+            </video>
 
-    <div class="uim-step">
-      <div class="uim-step-icon">🎓</div>
-      <h3>Solicita tu Beca</h3>
-      <p>Postúlate a una de nuestras becas.</p>
+        
+        <div class="row">
+        
+                <section class="pasos">
+                <div class="pasos-container">
 
-      <button class="entrar-bttn">
-                    <i class="fas fa-eye entrar-icon"></i>
-                    Contactar
-    </button>
-      <svg class="uim-arrow" viewBox="0 0 24 24">
-        <path d="M13 5l7 7-7 7M5 12h14"/>
-      </svg>
-    </div>
+                <div class="uim-steps-container">
+                <div class="uim-step">
+                    <div class="uim-step-icon">📝</div>
+                            <h3>Haz tu Test</h3>
+                            <p>Llena nuestro formulario inicial para comenzar tu proceso de inscripción en UIM.</p>
+                
+                 <button class="modal-insc-uim-bttn modal-insc-uim-abrir">
+                        <i class="fas fa-eye modal-insc-uim-icon"></i>
+                            Entrar
+                </button>
 
-    <div class="uim-step">
-      <div class="uim-step-icon">📞</div>
-      <h3>Contacta un Asesor</h3>
-      <p>Agenda una llamada con un asesor para resolver tus dudas y dar el siguiente paso.</p>
-      <button class="entrar-bttn">
-                    <i class="fas fa-eye entrar-icon"></i>
-                    Contactar
-    </button>
-    </div>
-  </div>
+                <svg class="uim-arrow" viewBox="0 0 24 24">
+                    <path d="M13 5l7 7-7 7M5 12h14"/>
+                </svg>
+                </div>
 
-    </div>
-</section>
-      
-      </div>
-      </div>
+                <div class="uim-step">
+                <div class="uim-step-icon">🎓</div>
+                <h3>Solicita tu Beca</h3>
+                <p>Postúlate a una de nuestras becas.</p>
 
-      
+               <button class="modal-insc-uim-bttn modal-insc-uim-abrir">
+                        <i class="fas fa-eye modal-insc-uim-icon"></i>
+                            Entrar
+                </button>
+                <svg class="uim-arrow" viewBox="0 0 24 24">
+                    <path d="M13 5l7 7-7 7M5 12h14"/>
+                </svg>
+                </div>
+
+                <div class="uim-step">
+                <div class="uim-step-icon">📞</div>
+                <h3>Contacta un Asesor</h3>
+                <p>Agenda una llamada con un asesor para resolver tus dudas y dar el siguiente paso.</p>
+                <button class="modal-insc-uim-bttn modal-insc-uim-abrir">
+                        <i class="fas fa-eye modal-insc-uim-icon"></i>
+                            Entrar
+                </button>
+                </div>
+            </div>
+
+        </div>
     </section>
+        
+        </div>
+        </div>
+<!-- modal de contacto-->
+<div class="modal-insc-uim-overlay" id="modal-insc-uim-overlay">
+        <div class="modal-insc-uim-container">
+            <button class="modal-insc-uim-close" id="modal-insc-uim-cerrar">
+                <i class="fas fa-times"></i>
+            </button>
+<!-- inicia formulario-->
+
+<div class="">
+                <form id="contact-form" method="post" action="contact.php" role="form">
+                    <div class="messages"></div>
+                    <div class="controls">
+                        <div class="row">
+                        <h1 class="p-contacto-titulo1">¡HABLEMOS!</h1>
+                        <p class="p-contacto-titulo2">Estamos listos para ayudarte a avanzar y que seas un <strong>#BúfaloUIM</strong> </p>
+                        <br><br>
+                        <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_name">Nombre*</label>
+                                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Ingresa tu nombre *" required="required" data-error="El campo nombre es necesario.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_lastname">Apellidos*</label>
+                                    <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Ingresa tus apellidos.*" required="required" data-error="El campo apellido es necesario.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_email">Correo electrónico*</label>
+                                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Ingresa tu correo electrónico" required="required" data-error="Ingresa un correo electrónico valido">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_phone">Teléfono*</label>
+                                    <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Ingresa tu teléfono." required="required" data-error="Ingresa un número de teléfono">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_level">Nivel</label>
+                                    <div class="select-wrapper">
+                                        <select id="form_level" name="level" class="form-control custom-select" required="required" onchange="updateProgramList()">
+                                            <option value="">Selecciona tu nivel de interes...</option>
+                                            <option value="Secundaria">Secundaria</option>
+                                            <option value="Preparatoria">Preparatoria</option>
+                                            <option value="Licenciatura">Licenciatura</option>
+                                            <option value="Maestría">Maestría</option>
+                                            <option value="Doctorado">Doctorado</option>
+                                        </select>
+                                        <span class="dropdown-icon"><i class="fas fa-chevron-down"></i></span>
+                                    </div>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_program">Programa</label>
+                                    <div class="select-wrapper">
+                                        <select id="form_program" name="program" class="form-control custom-select" required="required" data-error="Selecciona un programa de estudios">
+                                            <option value="">Selecciona tu programa de interes...</option>
+                                            <!-- Populated dynamically by JavaScript -->
+                                        </select>
+                                        <span class="dropdown-icon"><i class="fas fa-chevron-down"></i></span>
+                                    </div>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>                                                                                                                                        
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <br>
+                                    <label for="form_message">Mensaje</label>
+                                    <textarea id="form_message" name="message" class="form-control" placeholder="Escribe tu mensaje aquí..." rows="4" data-error="Porfavor, ingresa un mensaje."></textarea>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <br>
+                                <input type="submit" class="btn btn-success btn-send" value="Enviar Mensaje">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                    <p class="p-terminos-contacto">*Al enviar tus datos, aceptas nuestros <a href="">Términos y Condiciones </a> y puedes verificar nuestro <a href="assets/documentos/AVISO-DE-PRIVACIDAD-UIM-2025.pdf" target="_blank">Aviso de Privacidad</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+<!-- fin formulario-->
+
+        </div>
+    </div>
+
+
+<!-- fin de modal de contacto-->
+        
+        </section>
 
 <!-- FIN PASOS -->
 <!-- seccion preguntas-->

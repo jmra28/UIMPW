@@ -272,3 +272,41 @@ document.addEventListener("DOMContentLoaded", () => {
     }, index * 800); // Delay para animación escalonada
   });
 });
+
+
+
+//modal 
+
+const modalInscUimAbrirBtns = document.querySelectorAll('.modal-insc-uim-abrir');
+const modalInscUimCerrarBtn = document.getElementById('modal-insc-uim-cerrar');
+const modalInscUimOverlay = document.getElementById('modal-insc-uim-overlay');
+
+// Agregar evento a todos los botones para abrir el modal
+modalInscUimAbrirBtns.forEach(boton => {
+    boton.addEventListener('click', () => {
+        modalInscUimOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+});
+
+// Cerrar modal
+modalInscUimCerrarBtn.addEventListener('click', () => {
+    modalInscUimOverlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+});
+
+// Cerrar modal al hacer clic fuera del contenido
+modalInscUimOverlay.addEventListener('click', (e) => {
+    if (e.target === modalInscUimOverlay) {
+        modalInscUimOverlay.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+});
+
+// Cerrar modal con la tecla Escape
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modalInscUimOverlay.classList.contains('active')) {
+        modalInscUimOverlay.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+});
