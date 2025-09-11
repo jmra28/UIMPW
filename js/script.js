@@ -264,3 +264,11 @@ if (estadisticasSection) {
     observer.observe(estadisticasSection);
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+  const steps = document.querySelectorAll(".uim-step");
+  steps.forEach((step, index) => {
+    setTimeout(() => {
+      step.classList.add("visible");
+    }, index * 800); // Delay para animación escalonada
+  });
+});
