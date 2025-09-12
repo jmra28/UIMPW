@@ -1,171 +1,273 @@
-<!-- TESTIMONIOS -->
-<section class="com-uim-testimonials">
-  <div class="com-uim-container">
-    <div class="com-uim-row">
-      <div class="com-uim-col-sm-12">
-        <div id="com-uim-customers-testimonials" class="owl-carousel">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sección con Video y Carrusel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-          <!-- TESTIMONIO 1 -->
-          <div class="com-uim-item">
-            <div class="com-uim-shadow-effect">
-              <img class="com-uim-img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
-              <p>Dramáticamente mantienen soluciones click-and-mortar sin soluciones funcionales. Sinergizan completamente relaciones fiscales vía nichos de mercado premier.</p>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+        }
+
+        .video-section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .fullscreen-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 2;
+        }
+
+        .carousel-container {
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            transform: translateY(-50%);
+            width: 90%;
+            max-width: 500px;
+            z-index: 3;
+        }
+
+        .carousel {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease;
+            height: 100%;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            height: 100%;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .carousel-item h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        .carousel-item p {
+            color: #34495e;
+            line-height: 1.6;
+        }
+
+        .carousel-controls {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .carousel-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .carousel-btn:hover {
+            background: #fff;
+            transform: scale(1.05);
+        }
+
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+            gap: 10px;
+        }
+
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .indicator.active {
+            background: #fff;
+            transform: scale(1.2);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .carousel-container {
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            
+            .carousel-item h2 {
+                font-size: 1.5rem;
+            }
+            
+            .carousel {
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .carousel {
+                height: 220px;
+            }
+            
+            .carousel-item {
+                padding: 20px;
+            }
+            
+            .carousel-item h2 {
+                font-size: 1.3rem;
+            }
+            
+            .carousel-btn {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+  <br><br><br><br><br>
+    <section class="video-section">
+        <video class="fullscreen-video" autoplay muted loop playsinline>
+            <source src="assets/video/vid-enca2.mov" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+        </video>
+        <div class="overlay"></div>
+        
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item">
+                        <h2>Diseño Web Moderno</h2>
+                        <p>Creación de sitios web responsivos que se adaptan a cualquier dispositivo y pantalla, garantizando la mejor experiencia de usuario.</p>
+                    </div>
+                    <div class="carousel-item">
+                        <h2>Desarrollo a Medida</h2>
+                        <p>Soluciones personalizadas para tu negocio, desarrolladas con las últimas tecnologías y estándares de la industria.</p>
+                    </div>
+                    <div class="carousel-item">
+                        <h2>Optimización SEO</h2>
+                        <p>Mejoramos la visibilidad de tu sitio web en los motores de búsqueda, aumentando el tráfico y las conversiones.</p>
+                    </div>
+                </div>
             </div>
-            <div class="com-uim-testimonial-name">EMILIANO AQUILANI</div>
-          </div>
-          <!-- FIN TESTIMONIO 1 -->
-
-          <!-- TESTIMONIO 2 -->
-          <div class="com-uim-item">
-            <div class="com-uim-shadow-effect">
-              <img class="com-uim-img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
-              <p>Dramáticamente mantienen soluciones click-and-mortar sin soluciones funcionales. Sinergizan completamente relaciones fiscales vía nichos de mercado premier.</p>
+            
+            <div class="carousel-controls">
+                <button class="carousel-btn prev-btn">&#10094;</button>
+                <button class="carousel-btn next-btn">&#10095;</button>
             </div>
-            <div class="com-uim-testimonial-name">ANNA ITURBE</div>
-          </div>
-          <!-- FIN TESTIMONIO 2 -->
-
-          <!-- TESTIMONIO 3 -->
-          <div class="com-uim-item">
-            <div class="com-uim-shadow-effect">
-              <img class="com-uim-img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
-              <p>Dramáticamente mantienen soluciones click-and-mortar sin soluciones funcionales. Sinergizan completamente relaciones fiscales vía nichos de mercado premier.</p>
+            
+            <div class="carousel-indicators">
+                <div class="indicator active" data-index="0"></div>
+                <div class="indicator" data-index="1"></div>
+                <div class="indicator" data-index="2"></div>
             </div>
-            <div class="com-uim-testimonial-name">LARA ATKINSON</div>
-          </div>
-          <!-- FIN TESTIMONIO 3 -->
-
-          <!-- TESTIMONIO 4 -->
-          <div class="com-uim-item">
-            <div class="com-uim-shadow-effect">
-              <img class="com-uim-img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
-              <p>Dramáticamente mantienen soluciones click-and-mortar sin soluciones funcionales. Sinergizan completamente relaciones fiscales vía nichos de mercado premier.</p>
-            </div>
-            <div class="com-uim-testimonial-name">IAN OWEN</div>
-          </div>
-          <!-- FIN TESTIMONIO 4 -->
-
-          <!-- TESTIMONIO 5 -->
-          <div class="com-uim-item">
-            <div class="com-uim-shadow-effect">
-              <img class="com-uim-img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
-              <p>Dramáticamente mantienen soluciones click-and-mortar sin soluciones funcionales. Sinergizan completamente relaciones fiscales vía nichos de mercado premier.</p>
-            </div>
-            <div class="com-uim-testimonial-name">MICHAEL TEDDY</div>
-          </div>
-          <!-- FIN TESTIMONIO 5 -->
-
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- FIN TESTIMONIOS -->
+    </section>
+    <br><br><br><br><br>
 
-<!-- CSS -->
-<style>
-.com-uim-shadow-effect {
-  background: #fff;
-  padding: 20px;
-  border-radius: 4px;
-  text-align: center;
-  border: 1px solid #ECECEC;
-  box-shadow: 0 19px 38px rgba(0,0,0,0.10), 0 15px 12px rgba(0,0,0,0.02);
-}
-
-#com-uim-customers-testimonials .com-uim-shadow-effect p {
-  font-family: inherit;
-  font-size: 17px;
-  line-height: 1.5;
-  margin: 0 0 17px 0;
-  font-weight: 300;
-}
-
-.com-uim-testimonial-name {
-  margin: -17px auto 0;
-  display: table;
-  width: auto;
-  background: #3190E7;
-  padding: 9px 35px;
-  border-radius: 12px;
-  text-align: center;
-  color: #fff;
-  box-shadow: 0 9px 18px rgba(0,0,0,0.12), 0 5px 7px rgba(0,0,0,0.05);
-}
-
-#com-uim-customers-testimonials .com-uim-item {
-  text-align: center;
-  padding: 50px;
-  margin-bottom: 80px;
-  opacity: .2;
-  transform: scale3d(0.8, 0.8, 1);
-  transition: all 0.3s ease-in-out;
-}
-
-#com-uim-customers-testimonials .owl-item.active.center .com-uim-item {
-  opacity: 1;
-  transform: scale3d(1.0, 1.0, 1);
-}
-
-.owl-carousel .owl-item .com-uim-img-circle {
-  transform-style: preserve-3d;
-  max-width: 90px;
-  margin: 0 auto 17px;
-  border-radius: 50%;
-}
-
-#com-uim-customers-testimonials.owl-carousel .owl-dots .owl-dot.active span,
-#com-uim-customers-testimonials.owl-carousel .owl-dots .owl-dot:hover span {
-  background: #3190E7;
-  transform: translate3d(0px, -50%, 0px) scale(0.7);
-}
-
-#com-uim-customers-testimonials.owl-carousel .owl-dots {
-  display: inline-block;
-  width: 100%;
-  text-align: center;
-}
-
-#com-uim-customers-testimonials.owl-carousel .owl-dots .owl-dot {
-  display: inline-block;
-}
-
-#com-uim-customers-testimonials.owl-carousel .owl-dots .owl-dot span {
-  background: #3190E7;
-  display: inline-block;
-  height: 20px;
-  margin: 0 2px 5px;
-  transform: translate3d(0px, -50%, 0px) scale(0.3);
-  transform-origin: 50% 50% 0;
-  transition: all 250ms ease-out 0s;
-  width: 20px;
-}
-</style>
-
-<!-- JS -->
-<script>
-jQuery(document).ready(function($) {
-  "use strict";
-  $('#com-uim-customers-testimonials').owlCarousel({
-    loop: true,
-    center: true,
-    items: 3,
-    margin: 0,
-    autoplay: true,
-    dots: true,
-    autoplayTimeout: 8500,
-    smartSpeed: 450,
-    responsive: {
-      0: {
-        items: 1
-      },
-      768: {
-        items: 2
-      },
-      1170: {
-        items: 3
-      }
-    }
-  });
-});
-</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const carouselInner = document.querySelector('.carousel-inner');
+            const carouselItems = document.querySelectorAll('.carousel-item');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            const indicators = document.querySelectorAll('.indicator');
+            
+            let currentIndex = 0;
+            const totalItems = carouselItems.length;
+            
+            // Función para actualizar el carrusel
+            function updateCarousel() {
+                carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
+                
+                // Actualizar indicadores
+                indicators.forEach((indicator, index) => {
+                    if (index === currentIndex) {
+                        indicator.classList.add('active');
+                    } else {
+                        indicator.classList.remove('active');
+                    }
+                });
+            }
+            
+            // Event listeners para botones
+            prevBtn.addEventListener('click', function() {
+                currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalItems - 1;
+                updateCarousel();
+            });
+            
+            nextBtn.addEventListener('click', function() {
+                currentIndex = (currentIndex < totalItems - 1) ? currentIndex + 1 : 0;
+                updateCarousel();
+            });
+            
+            // Event listeners para indicadores
+            indicators.forEach(indicator => {
+                indicator.addEventListener('click', function() {
+                    currentIndex = parseInt(this.getAttribute('data-index'));
+                    updateCarousel();
+                });
+            });
+            
+            // Cambio automático cada 5 segundos
+            setInterval(function() {
+                currentIndex = (currentIndex < totalItems - 1) ? currentIndex + 1 : 0;
+                updateCarousel();
+            }, 5000);
+        });
+    </script>
+</body>
+</html>

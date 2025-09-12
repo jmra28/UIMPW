@@ -116,14 +116,14 @@ body {
 }
 
 /* Video Background */
-.background-video {
+#background-video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 1;
+    z-index: -1;
 }
 
 .video-hero-container {
@@ -132,27 +132,24 @@ body {
     height: 100vh; 
     min-height: 550px;
     overflow: hidden;
+     
+
 }
 
 /* Carousel Overlay */
 .carousel-overlay {
-
-    /* padding-top: 280px;*/
-    margin-top: 280px;
+    padding-top: 280px;
     position: relative;
     min-height: 75vh;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     color: 252b68;
-    text-align: left; 
-     background-color: #0056b3;
-   
-    
+    text-align: left;    
 }
 
 #heroCarousel {
-width: 50%;
+    width: 50%;
     max-width: 600px;
     position: relative;
     z-index: 2; 
