@@ -138,18 +138,17 @@ body {
 
 /* Carousel Overlay */
 .carousel-overlay {
-    padding-top: 280px;
+
+    /* padding-top: 280px;*/
+    margin-top: 280px;
     position: relative;
-    min-height: 75vh;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     color: 252b68;
     text-align: left; 
-    
-
-    
-
+     background-color: #0056b3;
+   
     
 }
 
@@ -279,6 +278,7 @@ width: 50%;
         width: 10%;
     }
     .carousel-content {
+        margin-top: 100px;
         max-width: 90%; /* Asegura que no se salga de pantalla */
         padding: 10px; /* Reduce el espacio interno */
     }
