@@ -116,14 +116,14 @@ body {
 }
 
 /* Video Background */
-#background-video {
+.background-video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1;
+    z-index: 1;
 }
 
 .video-hero-container {
@@ -132,8 +132,6 @@ body {
     height: 100vh; 
     min-height: 550px;
     overflow: hidden;
-     
-
 }
 
 /* Carousel Overlay */
@@ -142,6 +140,7 @@ body {
     /* padding-top: 280px;*/
     margin-top: 280px;
     position: relative;
+    min-height: 75vh;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -278,7 +277,6 @@ width: 50%;
         width: 10%;
     }
     .carousel-content {
-        margin-top: 100px;
         max-width: 90%; /* Asegura que no se salga de pantalla */
         padding: 10px; /* Reduce el espacio interno */
     }
