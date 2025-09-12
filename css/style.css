@@ -145,11 +145,16 @@ body {
     align-items: center;
     justify-content: flex-start;
     color: 252b68;
-    text-align: left;    
+    text-align: left; 
+    
+
+    
+
+    
 }
 
 #heroCarousel {
-    width: 50%;
+width: 50%;
     max-width: 600px;
     position: relative;
     z-index: 2; 
@@ -3342,6 +3347,7 @@ cursor: pointer;
 }
 
 /* Ajustes responsivos */
+
 @media (max-width: 991px) {
     .slider-prep {
         margin-top: 80px;

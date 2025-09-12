@@ -95,6 +95,43 @@
 
     <!-- Carousel Overlay -->
 
+    <div class="carousel-overlay">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="carousel-content">
+                        <h1 class="carousel-title">ÚNETE A LA FAMILIA BÚFALO!</h1>
+                        <p class="carousel-subtitle"><a href="#">MAESTROS INTERNACIONALES</a></p>
+                        <p class="carousel-text">TE ACOMPAÑAMOS EN TODO MOMENTO</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-content">
+                        <h1 class="carousel-title">PLATAFORMAS EDUCATIVAS</h1>
+                        <p class="carousel-subtitle"><a href="#">PLAN DE ESTUDIO PROFESIONALES</a></p>
+                        <p class="carousel-text">CLASES DIDÁCTICAS Y DINÁMICAS</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-content">
+                        <h1 class="carousel-title">ÉXITO GARANTIZADO</h1>
+                        <p class="carousel-subtitle"><a href="#">CERTIFICACIÓN</a></p>
+                        <p class="carousel-text">RECONOCIDA A NIVEL MUNDIAL</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
 </section>                  
         <div class="cuerpo">
                 
@@ -575,8 +612,8 @@
                             <h3>Haz tu Test</h3>
                             <p>Llena nuestro formulario inicial para comenzar tu proceso de inscripción en UIM.</p>
                 
-                 <button class="modal-insc-uim-bttn modal-insc-uim-abrir">
-                        <i class="fas fa-eye modal-insc-uim-icon"></i>
+                 <button class="modal-insc-uim-bttn" onclick="scrollToSeccion()">
+                        <i class="fas fa-eye"></i>
                             Entrar
                 </button>
 
@@ -590,8 +627,8 @@
                 <h3>Solicita tu Beca</h3>
                 <p>Postúlate a una de nuestras becas.</p>
 
-               <button class="modal-insc-uim-bttn modal-insc-uim-abrir">
-                        <i class="fas fa-eye modal-insc-uim-icon"></i>
+               <button class="modal-insc-uim-bttn" onclick="scrollToSeccion()">
+                        <i class="fas fa-eye"></i>
                             Entrar
                 </button>
                 <svg class="uim-arrow" viewBox="0 0 24 24">
@@ -603,8 +640,8 @@
                 <div class="uim-step-icon">📞</div>
                 <h3>Contacta un Asesor</h3>
                 <p>Agenda una llamada con un asesor para resolver tus dudas y dar el siguiente paso.</p>
-                <button class="modal-insc-uim-bttn modal-insc-uim-abrir">
-                        <i class="fas fa-eye modal-insc-uim-icon"></i>
+                <button class="modal-insc-uim-bttn" onclick="scrollToSeccion()">
+                        <i class="fas fa-eye"></i>
                             Entrar
                 </button>
                 </div>
@@ -837,7 +874,7 @@
                
         <div class="row">
             <div class="col-lg-6">
-                <form id="contact-form" method="post" action="contact.php" role="form">
+                <form id="contact-form"  action="https://formsubmit.co/auxiliarvirtual@uim.mx" method="POST" role="form">
                     <div class="messages"></div>
                     <div class="controls">
                         <div class="row">
@@ -1099,6 +1136,17 @@
 </footer>
 
     <!-- Bootstrap JS (includes Popper.js) -->
+<script>
+        function scrollToSeccion() {
+            const seccion = document.getElementById('contacto');
+            if (seccion) {
+                seccion.scrollIntoView({ 
+                    behavior: 'smooth',  
+                    block: 'start'       
+                });
+            }
+        }
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
