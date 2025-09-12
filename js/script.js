@@ -117,37 +117,35 @@ document.addEventListener('DOMContentLoaded', function() {
             animateNumbers();
         }
     }
-
-   
-
+  
     // Contact Form
-    const form = document.getElementById('contact-form');
-    if(form) {
-        form.addEventListener('submit', function(e) {
-            if (!form.checkValidity()) {
-                e.preventDefault();
-                e.stopPropagation();
+    const $form = document.querySelector('#contact-form')
+    $form.addEventListener('submit', handleSubmit)
+
+    async function handleSubmit(event){
+        event.preventDefault()
+        const form=new FormData(this)
+        const response = await fetch(this.action,{
+            method:this.method,
+            body:form,
+            headers:{
+                'Accept': 'application/json'
             }
-            form.classList.add('was-validated');
+        })
 
-            if (form.checkValidity()) {
-                e.preventDefault();
-                var url = "contact.php";
-                var messageAlert = "alert-success";
-                var messageText = "Tu mensaje ha sido enviado correctamente, nos comunicaremos contigo pronto.";
+        if (response.ok){
+            this.reset()
+            alert('gracias por enviar tus datos pronto un asesor se comunicará contigo')
+        }
 
-                var alertBox = `<div class="alert ${messageAlert} alert-dismissible fade show" role="alert">
-                    ${messageText}
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>`;
-
-                if (messageAlert && messageText) {
-                    $("#contact-form").find(".messages").html(alertBox);
-                    form.reset();
-                }
-            }
-        });
     }
+
+
+
+
+
+
+
 
     // Function to update program list
     window.updateProgramList = function() {
