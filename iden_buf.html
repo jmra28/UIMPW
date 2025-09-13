@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doctorado - UIM</title>
+    <title>Identidad - UIM</title>
     <!-- Link to local Bootstrap CSS -->
-    <link rel="stylesheet" href="../../css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Link to custom CSS -->
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">    
 
     <link href="https://cdn.materialdesignicons.com/5.9.55/css/materialdesignicons.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     
-    <link rel="shortcut icon" type="image/icon" href="../../assets/images/icon_bufalo.png"/>
+    <link rel="shortcut icon" type="image/icon" href="assets/images/icon_bufalo.png"/>
 
 </head>
 <body>
@@ -23,8 +22,8 @@
         <nav class="navbar navbar-expand-lg custom-navbar">
             <div class="container-fluid">
                 <!-- Logo and Text -->
-                <a class="navbar-brand d-flex align-items-center" href="../../index.html">
-                    <img src="../../assets/images/Logotipo UIM-03.png"  alt="UIM Logo" style="height: 85px; margin-right: 10px;">                    
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="assets/images/Logotipo UIM-03.png"  alt="UIM Logo" style="height: 85px; margin-right: 10px;">                    
                 </a>
                 <!-- Toggler for mobile -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,40 +33,42 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <!-- Navigation Links (Center) -->
                     <ul class="navbar-nav mx-auto">
-                        <li class="nav-item dropdown"> <a class="nav-link" href="../../index.html">INICIO </a> </li>
+                        <li class="nav-item dropdown"> <a class="nav-link" href="index.html" id="ofertaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">INICIO </a> </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="ofertaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Oferta Académica
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="ofertaDropdown">
-                                 <li><a class="dropdown-item" href="../sec/sec.html">Secundaria</a></li>
-                                <li><a class="dropdown-item" href="../prep/prep.html">Preparatoria</a></li>
-                                <li><a class="dropdown-item" href="../lic/lic.html">Licenciatura</a></li>
-                                <li><a class="dropdown-item" href="../maes/maes.html">Maestría</a></li>
-                                <li><a class="dropdown-item" href="../doc/doc.html">Doctorado</a></li>
+                                <li><a class="dropdown-item" href="./plan/sec/sec.html">Secundaria</a></li>
+                                <li><a class="dropdown-item" href="./plan/prep/prep.html">Preparatoria</a></li>
+                                <li><a class="dropdown-item" href="./plan/lic/lic.html">Licenciatura</a></li>
+                                <li><a class="dropdown-item" href="./plan/maes/maes.html">Maestría</a></li>
+                                <li><a class="dropdown-item" href="./plan/doc/doc.html">Doctorado</a></li>
                             </ul>
                         </li>
-                       <li class="nav-item dropdown">
+                        <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="comunidadDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Conócenos
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="comunidadDropdown">
                                 <li><a class="dropdown-item" href="identidad.html">Identidad Búfalo</a></li>
                                 <li><a class="dropdown-item" href="#">Mensaje de la rectora</a></li>
-                               
+                                <li><a class="dropdown-item" href="#">Reglamento académico</a></li>
+                                <li><a class="dropdown-item" href="#">Historia de la UIM</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="inversionDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Galería</a>                           
                         </li>
+                        
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle btn-alumnos" href="#" id="comunidadDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 ACCESO ALUMNOS
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="comunidadDropdown">
-                                 <li><a class="dropdown-item" href="https://uim.mx/moo/login/index.php" target="_blank">Plataforma UIM</a></li>
+                                <li><a class="dropdown-item" href="https://uim.mx/moo/login/index.php" target="_blank">Plataforma UIM</a></li>
                                 <li><a class="dropdown-item" href="https://sist-control-escolar.com/apex/f?p=205:LOGIN:977975742588:::::"target="_blank">Control Escolar</a></li>
-                                <li><a class="dropdown-item" href="https://uim.mx/me/"target="_blank">Realizar pagos</a></li>                                 
+                                <li><a class="dropdown-item" href="https://uim.mx/me/"target="_blank">Realizar pagos</a></li>                                
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -76,271 +77,117 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="comunidadDropdown">
                                 <li><a class="dropdown-item" href="https://uim.mx/moo/login/index.php" target="_blank">Plataforma UIM</a></li>
-                                <li><a class="dropdown-item" href="https://sist-control-escolar.com/apex/f?p=205:LOGIN:977975742588:::::"target="_blank">Control Escolar</a></li>
+                                <li><a class="dropdown-item" href="https://sist-control-escolar.com/apex/f?p=205:LOGIN:977975742588:::::" target="_blank">Control Escolar</a></li>
                             </ul>
                         </li>
-                    </ul>
-                   
+                    </ul>                
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- ENCABEZADO  -->
+<section class="video-hero-container">
 
-<section class="enca-prep">
-    <div class="enca-doc-container">
-        <div class="enca-doc-text">
-            <h1 class="enca-prep-title">Impulsa Tu Futuro</h1>
-            <h2 class="enca-prep-subtitle">Prepárate para el éxito con nuestra educación innovadora</h2>
-            <button class="enca-prep-button">Explora Ahora</button>             
-        </div>      
-    </div>   
-</section>
-
-
-<!-- SECCION BENEFICIOS doctorado -->
-<section class="bar-anim-info">
-    <div class="bar-anim-container">
-        <div class="bar-anim-image">
-            <img src="../../assets/images/doct.jpg" alt="Animated Bars Image" class="bar-anim-img">
-        </div>
-        <div class="bar-anim-content">
-
-         <div class="barra-titulos">
-                    <span class="barra-texto-azul-pasos">¿POR QUÉ ESTUDIAR </span><br>
-                    <span class="barra-texto-rojo-pasos"> UN DOCTORADO?</span>					    
-            </div>            
-            <p class="bar-anim-description">Descubre cómo nuestra institución impulsa tu éxito con un enfoque innovador y recursos de calidad diseñados para tu crecimiento académico y profesional.</p>
-            <div class="bar-anim-skills">
-                <div class="bar-anim-skill">
-                    <img src="../../assets/images/vineta-fub-rojo.png" alt="Icon" class="bar-anim-skill-icon">
-                    <div class="bar-anim-skill-content">
-                        <div class="bar-anim-skill-name">Innovación Educativa</div>
-                        <div class="bar-anim-skill-bar" data-percentage="85%">
-                            <div class="bar-anim-skill-level"></div>
-                            <span class="bar-anim-skill-percentage">85%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bar-anim-skill">
-                    <img src="../../assets/images/vineta-fub-rojo.png" alt="Icon" class="bar-anim-skill-icon">
-                    <div class="bar-anim-skill-content">
-                        <div class="bar-anim-skill-name">Apoyo Personalizado</div>
-                        <div class="bar-anim-skill-bar" data-percentage="90%">
-                            <div class="bar-anim-skill-level"></div>
-                            <span class="bar-anim-skill-percentage">90%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bar-anim-skill">
-                    <img src="../../assets/images/vineta-fub-rojo.png" alt="Icon" class="bar-anim-skill-icon">
-                    <div class="bar-anim-skill-content">
-                        <div class="bar-anim-skill-name">Conexión Empresarial</div>
-                        <div class="bar-anim-skill-bar" data-percentage="80%">
-                            <div class="bar-anim-skill-level"></div>
-                            <span class="bar-anim-skill-percentage">80%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bar-anim-skill">
-                    <img src="../../assets/images/vineta-fub-rojo.png" alt="Icon" class="bar-anim-skill-icon">
-                    <div class="bar-anim-skill-content">
-                        <div class="bar-anim-skill-name">Tecnología Avanzada</div>
-                        <div class="bar-anim-skill-bar" data-percentage="75%">
-                            <div class="bar-anim-skill-level"></div>
-                            <span class="bar-anim-skill-percentage">75%</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- FIN SECCION BENEFICIOS DOCTORADO -->
-<!--PLAN DE ESTUDIOS DOCTORADO-->
-<section class="sec-plan-est-prep">
- <div class="pasos-titulos">
-            <span class="texto-azul-faq">PLAN DE ESTUDIOS </span><span class="texto-rojo-faq">DOCTORADO</span>            
-    </div>
-  
-  <!-- fila 1-->
-<div class="study-plan-container">
-    <div class="study-plan-card">
-            <h2 class="card-title">Administración y Alta Dirección</h2>
-            <div class="button-group">
-               <a href="" target="_blank"><span class="btn btn-blue">Descargar</span></a>
-                <button class="btn btn-red">Inscribirse</button>
-            </div>
-            <img src="../../assets/images/7.png" alt="Programa Académico" class="card-image">
-        </div>
-       
-        <div class="study-plan-card">
-            <h2 class="card-title">Doctorado En Educación</h2>
-            <div class="button-group">
-                <a href="" target="_blank" class="btn btn-blue"><span>Descargar</span></a>
-                <button class="btn btn-red">Inscribirse</button>
-            </div>
-            <img src="../../assets/images/8.png" alt="Oferta Educativa" class="card-image">
-        </div>
-    </div>
-
-</div>
-
-
-</section>
-<!-- FIN PLAN DE ESTUDIOS DOCTORADO -->
-
-<!-- beneficios DOCTORADO-->
-<section class="beneficios"  >
-        <div class="beneficios-container">
-            <div class="beneficios-studio">
-                    <span class="texto-azul">BENEFICIOS DE </span><span class="texto-rojo"> METODOLOGÍA UIM</span>					    
-					<span class="texto-rojo-2">UNA FORMA DE ESTUDIAR QUE SE ADAPTA A TU VIDA</span>            
-            </div>
-           
-
- <div class="beneficios-grid">
-            <div class="beneficio-card">
-                <div class="beneficio-icon">
-
-                </div>
-                <div class="beneficio-text">
-                    <h3 class="beneficio-title">Flexibilidad Total</h3>
-                    <p class="beneficio-description">Estudia a tu propio ritmo con horarios adaptados a tu vida, permitiéndote equilibrar trabajo, familia y educación.</p>
-                </div>
-            </div>
-            <div class="beneficio-card">
-                <div class="beneficio-icon">
-                </div>
-                <div class="beneficio-text">
-                    <h3 class="beneficio-title">Tutor Personalizado</h3>
-                    <p class="beneficio-description">Recibe apoyo individualizado de tutores dedicados que te guiarán en cada paso de tu camino académico.</p>
-                </div>
-            </div>
-            <div class="beneficio-card">
-                <div class="beneficio-icon">
-                </div>
-                <div class="beneficio-text">
-                    <h3 class="beneficio-title">Certificación Global</h3>
-                    <p class="beneficio-description">Obtén certificaciones reconocidas a nivel mundial que impulsarán tu carrera en cualquier industria.</p>
-                </div>
-            </div>
-            <div class="beneficio-card">
-                <div class="beneficio-icon">
-                </div>
-                <div class="beneficio-text">
-                    <h3 class="beneficio-title">Red de Empresas</h3>
-                    <p class="beneficio-description">Conéctate con más de 50 empresas asociadas que confían en UIM para oportunidades laborales y prácticas.</p>
-                </div>
-            </div>
-            <div class="beneficio-card">
-                <div class="beneficio-icon">
-                </div>
-                <div class="beneficio-text">
-                    <h3 class="beneficio-title">Aprendizaje Adaptativo</h3>
-                    <p class="beneficio-description">Personaliza tu plan de estudios con tecnología que se adapta a tu estilo de aprendizaje y necesidades específicas.</p>
-                </div>
-            </div>
-            <div class="beneficio-card">
-                <div class="beneficio-icon">
-                </div>
-                <div class="beneficio-text">
-                    <h3 class="beneficio-title">Plataforma Virtual</h3>
-                    <p class="beneficio-description">Accede a una plataforma en línea moderna con recursos interactivos, clases grabadas y soporte 24/7.</p>
-                </div>
-            </div>
-        </div>
-                 
-        
-        </div>
-    </section>
-
-<!-- fin beneficios DOCTORADO-->
-
+    <video autoplay muted loop id="background-video">
+        <source src="assets/video/vid-enca2.mov" type="video/mp4">
+        Tu naveador no soporta el video.
+    </video>
 
    
-<!-- PASOS  -->
-  <section class="pasos">
-        <div class="pasos-titulos">
-                <span class="texto-azul-pasos">ESTAS A  </span><span class="texto-rojo-pasos"> 3 PASOS DEL ÉXITO PROFESIONAL</span>					    
-                <span class="texto-rojo-2-pasos">AQUÍ COMIENZA TU CAMINO PARA UN FUTURO MEJOR</span>            
-            </div>
-        <div class="container">    
 
-            <video autoplay muted loop id="pasos-video" class="pasos-video">
-                <source src="../../assets/video/particulas4.mp4" type="video/mp4">
-                Tu navegador no soporta el video.
-            </video>
+</section>                  
+       
 
-        
-        <div class="row">
-        
-                <section class="pasos">
-                <div class="pasos-container">
+<!-- SECCIÓN IDENTIDAD BÚFALO -->
+<section class="identidad-bufalo-section">
+    <div class="container">
+         <div class="pasos-titulos">
+            <span class="texto-azul-faq">IDENTIDAD </span><span class="texto-rojo-faq"> BÚFALO</span>
+        </div>
 
-                <div class="uim-steps-container">
-                <div class="uim-step">
-                    <div class="uim-step-icon"><img src="../../assets/images/p1.png" alt="" class="img_pasos_v2"></div>
-                            <h3>Haz tu Test</h3>
-                            <p>Llena nuestro formulario inicial para comenzar tu proceso de inscripción en UIM.</p>
-                
-                 <button class="modal-insc-uim-bttn" onclick="scrollToSeccion()">
-                        <i class="fas fa-eye"></i>
-                            Entrar
-                </button>
+        <div class="identidad-bufalo-container">
+            <div class="identidad-bufalo-mision">
+                <div class="identidad-bufalo-content">
+                    <h2 class="identidad-bufalo-subtitle">Misión</h2>
 
-                <svg class="uim-arrow" viewBox="0 0 24 24">
-                    <path d="M13 5l7 7-7 7M5 12h14"/>
-                </svg>
-                </div>
-
-                <div class="uim-step">
-                    <div class="uim-step-icon"><img src="../../assets/images/p2.png" alt="" class="img_pasos_v2"></div>
-                <h3>Solicita tu Beca</h3>
-                <p>Postúlate a una de nuestras becas.</p>
-
-               <button class="modal-insc-uim-bttn" onclick="scrollToSeccion()">
-                        <i class="fas fa-eye"></i>
-                            Entrar
-                </button>
-                <svg class="uim-arrow" viewBox="0 0 24 24">
-                    <path d="M13 5l7 7-7 7M5 12h14"/>
-                </svg>
-                </div>
-
-                <div class="uim-step">
-                    <div class="uim-step-icon"><img src="../../assets/images/p3.png" alt="" class="img_pasos_v2"></div>
-                <h3>Contacta un Asesor</h3>
-                <p>Agenda una llamada con un asesor para resolver tus dudas y dar el siguiente paso.</p>
-                <button class="modal-insc-uim-bttn" onclick="scrollToSeccion()">
-                        <i class="fas fa-eye"></i>
-                            Entrar
-                </button>
+                    <p class="identidad-bufalo-text">Formar personas con valores, capaces de responder a las exigencias presentes y futuras del entorno en donde se desempeñen, con espíritu emprendedor y una alta responsabilidad social.</p>
                 </div>
             </div>
+            <div class="identidad-bufalo-vision">
+                <div class="identidad-bufalo-content">
+                    <h2 class="identidad-bufalo-subtitle">Visión</h2>
+                    
+                    <p class="identidad-bufalo-text">Ser una institución reconocida que forme personas íntegras, capaces y emprendedoras con un alto grado de responsabilidad social.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gal-val-contenedor">
+         <div class="pasos-titulos">
+            <span class="texto-azul-faq">VALORES</span><span class="texto-rojo-faq"> BÚFALO</span>
+        </div>
 
-        </div>
-        
-        </div>
-        </div>
-            </section>
+    <div class="gal-val-galeria">
 
-<!-- FIN PASOS -->
+        <div class="gal-val-elemento">
+            <img class="gal-val-mostrar" src="assets/images/valores/Icnonos UIM-23.jpg" alt="Persona jugando videojuegos">
+        </div>
+        <div class="gal-val-elemento">
+            <img class="gal-val-mostrar" src="assets/images/valores/Icnonos UIM-24.jpg" alt="Mando con fondo difuminado">
+        </div>
+        <div class="gal-val-elemento">
+            <img class="gal-val-mostrar" src="assets/images/valores/Icnonos UIM-25.jpg" alt="mandos de ps4 siendo mandos de ps4">
+        </div>
+        <div class="gal-val-elemento">
+            <img class="gal-val-mostrar" src="assets/images/valores/Icnonos UIM-26.jpg" alt="Mas mandos de ps4 siendo mandos de ps4">
+        </div>
+        <div class="gal-val-elemento">
+            <img class="gal-val-mostrar" src="assets/images/valores/Icnonos UIM-27.jpg" alt="Mando de ps1 para ser alternativo indie">
+        </div>
+    </div>
+
+    <div class="gal-val-galeria">
+        <div class="gal-val-elemento">
+            <img class="gal-val-mostrar" src="assets/images/valores/Icnonos UIM-28.jpg" alt="Mandos de ps4 con colores de silla gamer">
+        </div>
+        <div class="gal-val-elemento">
+            <img class="gal-val-mostrar" src="assets/images/valores/Icnonos UIM-29.jpg" alt="Persona jugando videojuegos">
+        </div>
+        <div class="gal-val-elemento">
+            <img class="gal-val-mostrar" src="assets/images/valores/Icnonos UIM-30.jpg" alt="Mando con fondo difuminado">
+        </div>
+        <div class="gal-val-elemento">
+            <img class="gal-val-mostrar" src="assets/images/valores/Icnonos UIM-31.jpg" alt="mandos de ps4 siendo mandos de ps4">
+        </div>
+        <div class="gal-val-elemento">
+            <img class="gal-val-mostrar" src="assets/images/valores/Icnonos UIM-32.jpg" alt="Mas mandos de ps4 siendo mandos de ps4">
+        </div>
+    </div>
+</div>
+</section>
+<!-- FIN SECCIÓN IDENTIDAD BÚFALO -->
+
+
+
+
+
+
 
 
 <!-- SECCIÓN CONTACTO-->
 
 <section id="contacto" class="contact-section">
-    <div class="container">
-        <div class="pasos-titulos">
+
+     <div class="pasos-titulos">
             <span class="texto-azul-faq">ES MOMENTO DE </span><span class="texto-rojo-faq"> TOMAR ACCIÓN</span>
             <span class="texto-rojo-2-faq">DÉMOS JUNTOS EL PRIMER PASO</span>
         </div>
-
+        
+    <div class="container">
+               
         <div class="row">
             <div class="col-lg-6">
-                <form id="contact-form" method="post" action="contact.php" role="form">
+                <form id="contact-form"  action="https://formspree.io/f/xandkqrn"  method="POST" >
                     <div class="messages"></div>
                     <div class="controls">
                         <div class="row">
@@ -378,21 +225,40 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="form_level">Nivel</label>
                                     <div class="select-wrapper">
-                                        <select id="form_level" name="level" class="form-control custom-select" required="required" >
-                                            <option value="doctorado">Doctorado</option>
+                                        <select id="form_level" name="level" class="form-control custom-select" required="required" onchange="updateProgramList()">
+                                            <option value="">Selecciona tu nivel de interes...</option>
+                                            <option value="Secundaria">Secundaria</option>
+                                            <option value="Preparatoria">Preparatoria</option>
+                                            <option value="Licenciatura">Licenciatura</option>
+                                            <option value="Maestría">Maestría</option>
+                                            <option value="Doctorado">Doctorado</option>
                                         </select>
                                         <span class="dropdown-icon"><i class="fas fa-chevron-down"></i></span>
                                     </div>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
-                          
-                        </div>                                                                                                                                        
+                            
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_program">Programa</label>
+                                    <div class="select-wrapper">
+                                        <select id="form_program" name="program" class="form-control custom-select" required="required" data-error="Selecciona un programa de estudios">
+                                            <option value="">Selecciona tu programa de interes...</option>
+                                        </select>
+                                        <span class="dropdown-icon"><i class="fas fa-chevron-down"></i></span>
+                                    </div>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>      
+
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
@@ -409,8 +275,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <br>
-                                    <p class="p-terminos-contacto">*Al enviar tus datos, aceptas nuestros <a href="">Términos y Condiciones </a> y puedes verificar nuestro <a href="">Aviso de Privacidad</a>.</p>
+                                    <p class="p-terminos-contacto">*Al enviar tus datos, aceptas nuestros <a href="">Términos y Condiciones </a> y puedes verificar nuestro <a href="assets/documentos/AVISO-DE-PRIVACIDAD-UIM-2025.pdf" target="_blank">Aviso de Privacidad</a>.</p>
                             </div>
                         </div>
                     </div>
@@ -492,11 +357,6 @@
                             <div class="contact-detail">
                                 <i class="fas fa-phone"></i> <strong>Teléfono:</strong> 444-277-85-20
                             </div>  
-
-
-
-
-
                 </div>
             </div>
         </div>
@@ -505,7 +365,9 @@
 <!-- FIN SECCIÓN CONTACTO-->
  <!-- SECCION MAPA-->
 
-<div class="contenedor-imagen"></div>
+<div class="contenedor-imagen">
+
+</div>
 
 <!-- FIN SECCION MAPA-->
 
@@ -513,10 +375,18 @@
 <section class="video-prom">
         <div class="video-container">
             <video autoplay loop muted playsinline class="video-bg">
-                <source src="../../assets/video/vid-prom3.mp4" type="video/mp4">
+                <source src="assets/video/particulas2.mp4" type="video/mp4">
                 Tu navegador no soporta el video
             </video>
-        </div>
+    <div class="overlay-img-prom">
+
+                <img src="assets/images/invierte.png" alt="">
+    </div>    
+    </div>
+
+       
+
+
 </section>
 <!-- FIN SECCION VIDEO-->
 
@@ -530,7 +400,7 @@
                 
                 <div class="social-links2">
                 <!-- LOGO UIM-->
-                    <img src="../../assets/images/logo-b.png" alt="">
+                    <img src="assets/images/logo-b.png" alt="">
                     <br>
                     <div class="footer-line2"></div>
                     <br>
@@ -540,28 +410,28 @@
                 </div>
             </div>
             <div class="footer-section">
-                <h3 class="footer-title">Oferta académica</h3>
+                <h3 class="footer-title">OFERTA ACADÉMICA</h3>
                 <div class="footer-line2"></div>
                 <ul class="footer-links">
-                    <li><a href="#">Secundaria</a></li>
-                    <li><a href="#">Preparatoria</a></li>
-                    <li><a href="#">Licenciatura</a></li>
-                    <li><a href="#">Maestría</a></li>
-                    <li><a href="#">Posgrados</a></li>
+                    <li><a href="plan/sec/sec.html">SECUNDARIA</a></li>
+                    <li><a href="#">PREPARATORIA</a></li>
+                    <li><a href="#">LICENCIATURA</a></li>
+                    <li><a href="#">MAESTRÍA</a></li>
+                    <li><a href="#">POSGRADOS</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3 class="footer-title">Links Directos</h3>
+                <h3 class="footer-title">LINKS DIRECTOS</h3>
                 <div class="footer-line2"></div>
                 <ul class="footer-links">                                        
-                    <li><a href="https://uim.mx/moo" target="_blank">Plataforma UIM</a></li>
-                    <li><a href="https://sist-control-escolar.com/apex/f?p=205:LOGIN:12168182438217:::::" target="_blank">Control Escolar</a></li>
-                    <li><a href="https://uim.mx/me/" target="_blank">Pagos</a></li>            
+                    <li><a href="https://uim.mx/moo" target="_blank">PLATAFORMA UIM</a></li>
+                    <li><a href="https://sist-control-escolar.com/apex/f?p=205:LOGIN:12168182438217:::::" target="_blank">CONTROL ESCOLAR</a></li>
+                    <li><a href="https://uim.mx/me/" target="_blank">PAGOS</a></li>            
                 </ul>
             </div>
 
             <div class="footer-section">
-                <h3 class="footer-title">Contacto</h3>
+                <h3 class="footer-title">CONTACTO</h3>
 
                 <div class="footer-line2"></div>
 
@@ -569,35 +439,33 @@
                 <p>Tel: 618-156-03-78 </p>
                 <p><a href="mailto:info@uim.edu.mx" style="color: #fff;">vinculacion@uim.mx</a></p>
             </div>
-            <!--
-            <div class="footer-section">
-                <h3 class="footer-title">Síguenos</h3>
-                <hr style="width: 80%;">
-
-                <div class="social-links">
-                    <a href="https://www.facebook.com/uimexicana" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/uim_bufalos" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.tiktok.com/@uimuniversidad" aria-label="Instagram"><i class="fab fa-tiktok"></i></a>
-
-                </div>
-            </div>
-                -->
-
+          
         </div>
 
         <div class="footer-bottom">
-            <div class="footer-line"></div>
-            <p class="footer-copyright">© 2025 Universidad Internacional Mexicana. Todos los derechos reservados.</p>
+            <span class="footer-copyright">UNIVERSIDAD INTERNACIONAL MEXICANA | ©2025</span>            
+            <span class="footer-copyright"><a href="assets/documentos/AVISO-DE-PRIVACIDAD-UIM-2025.pdf" target="_blank">AVISO DE PRIVACIDAD </a> | TERMINOS Y CONDICIONES | UVN</span>
         </div>
     </div>
 </footer>
 
     <!-- Bootstrap JS (includes Popper.js) -->
+<script>
+        function scrollToSeccion() {
+            const seccion = document.getElementById('contacto');
+            if (seccion) {
+                seccion.scrollIntoView({ 
+                    behavior: 'smooth',  
+                    block: 'start'       
+                });
+            }
+        }
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="../../js/bootstrap.bundle.min.js"></script>
-    <script src="../../js/script.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 </html>
