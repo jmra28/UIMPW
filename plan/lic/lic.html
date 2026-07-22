@@ -309,7 +309,7 @@
 <!-- PASOS  -->
   <section class="pasos">
         <div class="pasos-titulos">
-                <span class="texto-azul-pasos">ESTAS A  </span><span class="texto-rojo-pasos"> 3 PASOS DEL ÉXITO PROFESIONAL</span>					    
+                <span class="texto-azul-pasos">ESTÁS A  </span><span class="texto-rojo-pasos"> 3 PASOS DEL ÉXITO PROFESIONAL</span>					    
                 <span class="texto-rojo-2-pasos">AQUÍ COMIENZA TU CAMINO PARA UN FUTURO MEJOR</span>            
             </div>
         <div class="container">    
@@ -595,7 +595,7 @@
 
 
 <!-- footer -->
-   <footer class="footer">
+  <footer class="footer">
     <div class="container">
         <div class="footer-top">
             <div class="footer-section">
@@ -615,11 +615,11 @@
                 <h3 class="footer-title">OFERTA ACADÉMICA</h3>
                 <div class="footer-line2"></div>
                 <ul class="footer-links">
-                    <li><a href="plan/sec/sec.html">SECUNDARIA</a></li>
-                    <li><a href="#">PREPARATORIA</a></li>
-                    <li><a href="#">LICENCIATURA</a></li>
-                    <li><a href="#">MAESTRÍA</a></li>
-                    <li><a href="#">POSGRADOS</a></li>
+                    <li><a href="sec.html">SECUNDARIA</a></li>
+                    <li><a href="/plan/prep/prep.html">PREPARATORIA</a></li>
+                    <li><a href="/plan/lic/lic.html">LICENCIATURA</a></li>
+                    <li><a href="/plan/maes/maes.html">MAESTRÍA</a></li>
+                    <li><a href="/plan/doc/doc.html">POSGRADOS</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -646,12 +646,26 @@
 
         <div class="footer-bottom">
             <span class="footer-copyright">UNIVERSIDAD INTERNACIONAL MEXICANA | ©2025</span>            
-            <span class="footer-copyright"><a href="../../assets/documentos/AVISO-DE-PRIVACIDAD-UIM-2025.pdf" target="_blank">AVISO DE PRIVACIDAD </a> | TERMINOS Y CONDICIONES | UVN</span>
+            <span class="footer-copyright"><a href="../../assets/documentos/AVISO-DE-PRIVACIDAD-UIM-2025.pdf" target="_blank">AVISO DE PRIVACIDAD </a> | TÉRMINOS Y CONDICIONES | UVN</span>
         </div>
     </div>
 </footer>
 
+
+
     <!-- Bootstrap JS (includes Popper.js) -->
+
+    <script>
+        function scrollToSeccion() {
+            const seccion = document.getElementById('contacto');
+            if (seccion) {
+                seccion.scrollIntoView({ 
+                    behavior: 'smooth',  
+                    block: 'start'       
+                });
+            }
+        }
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>

@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Carousel Hero
+    // Carousel Hero (páginas que aún cargan Bootstrap; index.html ya lo maneja en js/index.js)
     var myCarousel = document.querySelector('#heroCarousel');
-    if(myCarousel) {
+    if(myCarousel && typeof bootstrap !== 'undefined') {
         var carousel = new bootstrap.Carousel(myCarousel, {
             interval: 5000,
-            ride: 'carousel'       
+            ride: 'carousel'
         });
     }
 
@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var programSelect = document.getElementById("form_program");
         
         if(level && programSelect) {
-            programSelect.innerHTML = '<option value="">Selecciona tu programa de interes... *</option>';
+            programSelect.innerHTML = '<option value="">Selecciona tu programa de interés... *</option>';
             
             if (level.value === "Secundaria" || level.value === "Preparatoria") {
                 programSelect.value = "";
@@ -163,11 +163,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 let jsonUrl = '';
                 
                 if (level.value === "Licenciatura") {
-                    jsonUrl = 'programas/lic.json';
+                    jsonUrl = '/programas/lic.json';
                 } else if (level.value === "Maestría") {
-                    jsonUrl = 'programas/maes.json';
+                    jsonUrl = '/programas/maes.json';
                 } else if (level.value === "Doctorado") {
-                    jsonUrl = 'programas/doct.json';
+                    jsonUrl = '/programas/doct.json';
                 }
 
                 if (jsonUrl) {

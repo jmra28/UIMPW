@@ -1017,6 +1017,7 @@ height: 150px;
     font-weight: 900;
     font-family: 'Gotham', sans-serif;
 }
+
 .p-contact-texto4{
     color: #ea1d2c;
     font-size: 1.8rem;
@@ -1033,6 +1034,19 @@ height: 150px;
 
 .contact-info hr{
     margin:2px;
+}
+
+.contact-info a{
+  text-decoration: none;
+    color: #222857;
+}
+
+.contact-info a:hover{
+    color: #ea1d2c;
+    font-weight: 530;
+      text-decoration:underline;
+
+
 }
 
 .contact-section .form-group label {
@@ -2003,7 +2017,7 @@ width: 100%;
     display: flex;
     flex-direction: row;
     gap: 20px;
-     justify-content: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra horizontalmente */
     align-items: center;     /* Centra verticalmente */
 }
 
@@ -2011,7 +2025,7 @@ width: 100%;
     justify-content: center; /* Centra horizontalmente */
     align-items: center;     /* Centra verticalmente */
     width: 33.33%;
-    height: 400px;
+    height: 450px;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
