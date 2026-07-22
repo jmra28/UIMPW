@@ -1,0 +1,646 @@
+/* ============================================================
+   css/componentes.css
+   Estilos y mecánica PURA CSS (sin Bootstrap) de las piezas que se
+   repiten en TODAS las páginas del sitio: menú/nav, dropdowns,
+   pie de página y sección de contacto, más el grid y los botones/
+   formularios base que esas piezas necesitan.
+
+   Se enlaza desde TODAS las páginas. No pongas aquí nada exclusivo
+   de una sola página (eso va en su propio css, ej. css/index.css).
+   ============================================================ */
+
+/* ---------- Utilidades mínimas (antes provistas por Bootstrap) ---------- */
+.d-flex { display: flex; }
+.align-items-center { align-items: center; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+/* ---------- Grid (container / row / col-*) ---------- */
+.container, .container-fluid {
+    width: 100%;
+    padding-right: 12px;
+    padding-left: 12px;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media (min-width: 576px)  { .container { max-width: 540px; } }
+@media (min-width: 768px)  { .container { max-width: 720px; } }
+@media (min-width: 992px)  { .container { max-width: 960px; } }
+@media (min-width: 1200px) { .container { max-width: 1140px; } }
+@media (min-width: 1400px) { .container { max-width: 1320px; } }
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -12px;
+    margin-left: -12px;
+}
+.row > [class*="col-"] {
+    padding-right: 12px;
+    padding-left: 12px;
+}
+.col-md-6, .col-md-12, .col-lg-6 { width: 100%; }
+@media (min-width: 768px) {
+    .col-md-6 { flex: 0 0 50%; max-width: 50%; }
+    .col-md-12 { flex: 0 0 100%; max-width: 100%; }
+}
+@media (min-width: 992px) {
+    .col-lg-6 { flex: 0 0 50%; max-width: 50%; }
+}
+
+/* ---------- Navbar (mecánica) ---------- */
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-toggler {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: transparent;
+    border: 1px solid rgba(34, 40, 87, 0.3);
+    border-radius: 0.25rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path stroke="rgb(34,40,87)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>');
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+}
+
+/* Colapsado en móvil/tablet: oculto salvo que el toggler lo abra */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        display: none;
+        width: 100%;
+    }
+    .navbar-collapse.show {
+        display: block;
+    }
+}
+
+/* Igual que navbar-expand-lg de Bootstrap: desde 992px todo va en línea */
+@media (min-width: 992px) {
+    .navbar-toggler { display: none; }
+    .navbar-collapse { display: flex !important; flex-basis: auto; }
+    .navbar-nav { flex-direction: row; }
+    .navbar-nav .nav-link { padding-right: 0.5rem; padding-left: 0.5rem; }
+}
+
+/* Ajustes de espaciado del menú en móvil/tablet (antes en style.css,
+   mezclados con reglas del carrusel; movidos aquí porque son del nav) */
+@media (max-width: 991px) {
+    .navbar-nav { text-align: center; }
+    .nav-link { margin: 5px 0; }
+    .d-flex { justify-content: center; margin-top: 10px; }
+    .btn-alumnos, .btn-empresas { margin: 5px; }
+}
+@media (max-width: 480px) {
+    .navbar-nav { margin-top: 10px; }
+    .btn-alumnos, .btn-empresas { font-size: 0.8rem; padding: 6px 12px; }
+}
+
+/* ---------- Dropdown del menú ---------- */
+.dropdown { position: relative; }
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0.125rem 0 0;
+    list-style: none;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.dropdown-menu.show { display: block; }
+
+/* En móvil (menú colapsado) el submenú se acomoda en flujo normal */
+@media (max-width: 991.98px) {
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        border: none;
+        padding-left: 1rem;
+    }
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.35rem 1rem;
+    clear: both;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.nav-link { display: block; padding: 0.5rem 1rem; text-decoration: none; cursor: pointer; }
+
+/* ============================================================
+   Header / menú (antes "Header styles", "Menu item styles",
+   "Dropdown menu styles", "Dropdown arrow styles", "Button styles"
+   en style.css — visual, movido tal cual)
+   ============================================================ */
+.custom-navbar {
+    background: linear-gradient(to right, #f5f5f5, #e5e5e5);
+    padding: 10px 20px;
+}
+
+.navbar-brand {
+    font-size: 1rem;
+}
+
+.nav-link {
+    color: rgb(34, 40, 87) !important;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 15px;
+    font-family: 'Gothan', sans-serif;
+}
+
+.nav-link:hover {
+    color: #ea1d2c !important;
+}
+
+.dropdown-menu {
+    background-color: #f5f5f5;
+}
+
+.dropdown-toggle::after {
+    border: none;
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url('../assets/images/abajo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.dropdown-item {
+    color: rgb(34, 40, 87);
+    font-size: 0.9rem;
+}
+
+.dropdown-item:hover {
+    background-color: #e5e5e5;
+    color: #ea1d2c;
+}
+
+.btn-alumnos {
+    background: #252B68;
+    background: linear-gradient(180deg,rgba(37, 43, 104, 1) 0%, rgba(37, 43, 104, 0.77) 100%);
+    color: white !important;
+    border-radius: 10px;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    box-shadow: 0px 0px 10px grey;
+    text-decoration: none;
+}
+
+.btn-alumnos:hover {
+    background: #961820;
+    background: linear-gradient(180deg,rgba(150, 24, 32, 1) 0%, rgba(234, 29, 44, 1) 100%);
+    color: white !important;
+}
+
+.btn-empresas {
+    text-decoration: none;
+    margin-left: 10px;
+    box-shadow: 0px 0px 10px grey;
+    background: #961820;
+    background: linear-gradient(180deg,rgba(150, 24, 32, 1) 0%, rgba(234, 29, 44, 1) 100%);
+    color: white !important;
+    border-radius: 10px;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.btn-empresas:hover {
+    background: #252B68;
+    background: linear-gradient(180deg,rgba(37, 43, 104, 1) 0%, rgba(37, 43, 104, 0.77) 100%);
+    color: white !important;
+}
+
+/* ---------- Botones y formulario (mecánica base) ---------- */
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.btn-link {
+    font-weight: 400;
+    text-decoration: underline;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.form-group { margin-bottom: 1rem; }
+.help-block { display: block; margin-top: 0.25rem; font-size: 0.875em; }
+
+.form-control {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    appearance: none;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.custom-select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: none;
+}
+
+/* ============================================================
+   Sección de contacto (antes "Contact Form and Info Section
+   Styles" + "Custom Select Styles" en style.css — visual,
+   movido tal cual)
+   ============================================================ */
+.contact-section {
+    padding: 40px 0;
+    background-image: url("../assets/images/back.jpg");
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+.p-terminos-contacto {
+    margin: 0px;
+    font-weight: 500;
+    font-size: 11px;
+}
+.p-contacto-titulo1 {
+    display: block;
+    color: #222857;
+    font-size: 1.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-top: 1px;
+    font-family: 'Gotham', sans-serif;
+}
+.p-contact-texto3 {
+    color: #222857;
+    font-size: 1.8rem;
+    font-weight: 900;
+    font-family: 'Gotham', sans-serif;
+}
+
+.p-contact-texto4 {
+    color: #ea1d2c;
+    font-size: 1.8rem;
+    font-weight: 900;
+    font-family: 'Gotham', sans-serif;
+}
+
+.p-terminos-contacto a {
+    font-weight: 500;
+    font-size: 11px;
+    color: #ea1d2c;
+}
+
+.contact-info hr {
+    margin: 2px;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #222857;
+}
+
+.contact-info a:hover {
+    color: #ea1d2c;
+    font-weight: 530;
+    text-decoration: underline;
+}
+
+.contact-section .form-group label {
+    font-family: 'Gotham', sans-serif;
+    color: rgb(34, 40, 87);
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.contact-section .form-control {
+    font-family: 'Gotham', sans-serif;
+    border: 1px solid rgba(34, 40, 87, 0.2);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.contact-section .form-control:focus {
+    border-color: #ea1d2c;
+    box-shadow: 0 0 5px rgba(193, 39, 45, 0.3);
+}
+
+.contact-section .form-control::placeholder {
+    border-color: #ea1d2c;
+    font-size: 17px;
+}
+
+.contact-section .btn-send {
+    background-color: #ea1d2c;
+    border-color: #ea1d2c;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-family: 'Gotham', sans-serif;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.contact-section .btn-send:hover {
+    background-color: #ea1d2c;
+    border-color: #ea1d2c;
+}
+
+.contact-section .text-muted {
+    color: #666;
+    font-size: 0.9rem;
+}
+.contact-info i {
+    color: #ea1d2c;
+}
+
+.contact-section .text-muted a {
+    color: #ea1d2c;
+}
+
+.contact-section .text-muted a:hover {
+    color: #ea1d2c;
+}
+
+.contact-section .messages {
+    margin-bottom: 5px;
+}
+
+.contact-section .alert {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.contact-section .alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.contact-section .contact-info {
+    font-family: 'Gotham', sans-serif;
+    color: #222857;
+    padding: 20px;
+    border: 1px solid rgba(34, 40, 87, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section .contact-info h3 {
+    color: #ea1d2c;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.contact-section .contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-section .contact-info strong {
+    color: rgb(34, 40, 87);
+}
+
+.select-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.select-wrapper .custom-select {
+    padding-right: 30px;
+}
+
+.dropdown-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #222857;
+    pointer-events: none;
+}
+
+.custom-select:focus + .dropdown-icon {
+    color: #ea1d2c;
+}
+
+@media (max-width: 991px) {
+    .contact-section .col-lg-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .contact-section .contact-info {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .contact-section .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .contact-section .form-control {
+        padding: 8px;
+    }
+    .contact-section .btn-send {
+        width: 100%;
+    }
+}
+
+/* ============================================================
+   Pie de página (antes "footer*" en style.css — visual,
+   movido tal cual)
+   ============================================================ */
+.footer {
+    background-color: #030936;
+    color: #fff;
+    padding: 30px 0 0;
+    font-family: 'Gotham', sans-serif;
+    width: 100%;
+}
+
+.footer .container {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-title {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ea1d2c;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.social-links2 img {
+    width: 80%;
+}
+
+.social-links2 a {
+    margin-left: 15%;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.social-links a:hover {
+    color: #ea1d2c;
+}
+
+.footer-bottom {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background: #d4d4d4;
+    background: linear-gradient(360deg,rgba(212, 212, 212, 1) 0%, rgba(249, 249, 249, 1) 62%, rgba(255, 255, 255, 1) 100%);
+}
+
+.footer-line {
+    height: 2px;
+    background-color: #ea1d2c;
+    width: 50px;
+    margin: 0 auto 10px;
+}
+
+.footer-line2 {
+    text-align: left;
+    height: 1px;
+    background-color: #ea1d2c;
+    width: 80%;
+    margin: 0 0 10px;
+}
+
+.footer-copyright {
+    font-size: 0.9rem;
+    margin: 0;
+    color: #343232;
+    margin-right: 8%;
+    font-weight: 750;
+}
+
+.footer-copyright a {
+    text-decoration: none;
+    color: #343232;
+}
+
+@media (max-width: 767px) {
+    .footer-top {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-section {
+        margin-bottom: 30px;
+    }
+    .social-links a {
+        margin: 0 10px;
+    }
+    .footer-bottom {
+        padding: 15px 0;
+    }
+    .footer .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media (min-width: 768px) {
+    .footer-section {
+        margin-right: 20px;
+    }
+    .footer-section:last-child {
+        margin-right: 0;
+    }
+}
