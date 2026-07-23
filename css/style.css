@@ -1640,8 +1640,9 @@ color: #ffffff;
  /* fin plan prepa*/
 
 /* maestros*/
-@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css');
-@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
+/* @import a Bootstrap 3.3.5 y Font Awesome 4 eliminados: no los usa
+   ningún selector de esta sección (.teacher-*), y el sitio ya carga
+   Font Awesome 5 en el <head> de cada página. */
 @import url('https://fonts.googleapis.com/css?family=Raleway:100,600');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
 
@@ -3729,12 +3730,13 @@ cursor: pointer;
 
 
 
-/* rectora*/
- * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+/* rectora: reset acotado a esta sección (antes era "* {}" global y
+   se filtraba a todo el sitio) */
+.rec_mes_hero, .rec_mes_hero * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
         .rec_mes_hero {
             position: relative;
