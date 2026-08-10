@@ -975,7 +975,7 @@ width: 100%;
 .secu-bene-beneficios-secundaria {
 
   height: 100vh;
-  background-image: url("../assets/images/bene_secv2.jpg");
+  background-image: url("../assets/images/secu_bene_tall2.jpg");
   background-size: contain; 
   background-position: center;
   background-repeat: no-repeat;
@@ -3741,7 +3741,7 @@ cursor: pointer;
         .rec_mes_hero {
             position: relative;
             width: 100%;
-            height: auto;
+            height: 100vh;
             background-image: url('../assets/images/rectora2.jpg');
             background-size: cover;
             background-position: center;
@@ -3756,11 +3756,9 @@ cursor: pointer;
             border-radius: 15px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
             padding: 30px;
-            max-width: 600px;
+            max-width: 500px;
             width: 100%;
             margin-right: 5%;
-            text-align: justify;
-
         }
 
         .rec_mes_title {
